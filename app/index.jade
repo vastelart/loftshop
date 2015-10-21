@@ -1,0 +1,68 @@
+doctype html
+html
+	head
+		title TEST
+		meta(name="viewport" content="width=1140, initial-scale=1.0")
+		link(rel="stylesheet" href="bower/normalize-css/normalize.css")
+		link(rel="stylesheet" href="css/main.css")
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic' rel='stylesheet' type='text/css')
+		script(src="bower/modernizr/modernizr.js")
+	body
+		header.head
+			ul.head__socials
+				li.socials-item
+					a(href="#" class="fb")
+						span.text-hide facebook.com/cooltech
+				li.socials-item
+					a(href="#" class="vk")
+						span.text-hide vk.com/cooltech
+				li.socials-item
+					a(href="#" class="tw")
+						span.text-hide twitter.com/cooltech
+			.head__address ул. Маяковская 6, офис 17
+			.head__phone +7 (921) 123-12-13 &#8381;
+
+			//Логотип
+			.head__logo
+				h1.text-hide COOLTECH
+			.head__search-form
+				span.text-hide Поиск по каталогу
+				form(id="searchForm", action="/")
+					input(type="text", name="search", class="search-form__input")
+					button(type="submit", name="submit", class="search-form__submit search-form__submit_orange") Найти
+
+			//"Быстрая корзина"
+			ul.head__extras
+				li.extras-item
+					a.extras-item-link(href="#") Карта проезда
+				li.extras-item
+					a.extras-item-link(href="#") История заказов
+				li.extras-item
+					a.extras-item-link(href="#") Корзина
+
+			//Основная навигация по магазину
+			ul.head__navigation
+				li.navigation-item
+					a(href="#").navigation-item-link Планшеты
+				li.navigation-item
+					a(href="#").navigation-item-link Мобильные телефоны
+				li.navigation-item
+					a(href="#").navigation-item-link MP3-плееры
+				li.navigation-item
+					a(href="#").navigation-item-link Персональные компьютеры
+				li.navigation-item
+					a(href="#").navigation-item-link Ноутбуки
+				li.navigation-item
+					a(href="#").navigation-item-link Аксессуары
+				li.navigation-item
+					a(href="#").navigation-item-link Бытовая техника
+
+			//Breadcrumbs
+			ul.head__bcrumbs.head__bcrumbs_inline
+				li.bcrumbs-item
+					a.bcrumbs-link(href="#") Главная
+				li.bcrumbs-item
+					a.bcrumbs-link(href="#") Каталог
+
+
+		script(src="/bower/jquery/jquery.min.js")
