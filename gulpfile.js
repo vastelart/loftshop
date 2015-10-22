@@ -6,10 +6,10 @@ var jade = require('gulp-jade');
 
 var paths = {
 	scss: 'app/scss/**/*.scss',
-	jade: 'app/**/*.jade'
+	jade: 'app/index.jade'
 }
  
-gulp.task('serve', function() {
+gulp.task('serve', ['watch-scss', 'watch-jade'], function() {
   gulp.src('app')
     .pipe(server({
       livereload: true,

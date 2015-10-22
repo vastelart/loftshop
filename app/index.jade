@@ -1,68 +1,178 @@
 doctype html
+
+- var socials = ['fb', 'vk', 'tw']
+- var socialsLinks = {fb: 'facebook.com/cooltech', vk: 'vk.com/cooltech', tw: 'twitter.com/cooltech'}
+- var extras = ['Карта проезда', 'История заказов', 'Корзина']
+- var mainNav = ['Планшеты', 'Мобильные телефоны', 'MP3-плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
+- var colors = ['white', '#cccccc', 'black', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
+
+mixin socialsList(classes, links, block, element)
+	ul(class="#{block}")
+		each social in socials
+			li(class="#{element}")
+				a(class="#{social}", href="#")
+					span.text-hide= socialsLinks['' + social + '']
+
+mixin listSet(block, element, linkClass, linkText)
+	ul(class="#{block}")
+		each text in linkText
+			li(class="#{element}")
+				a(class="#{linkClass}", href="#") #{text}
+
+//mixin brands(block)
+
+
 html
 	head
-		title TEST
+		title COOLTECH
 		meta(name="viewport" content="width=1140, initial-scale=1.0")
 		link(rel="stylesheet" href="bower/normalize-css/normalize.css")
 		link(rel="stylesheet" href="css/main.css")
 		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic' rel='stylesheet' type='text/css')
+		//modernizr
 		script(src="bower/modernizr/modernizr.js")
 	body
 		header.head
-			ul.head__socials
-				li.socials-item
-					a(href="#" class="fb")
-						span.text-hide facebook.com/cooltech
-				li.socials-item
-					a(href="#" class="vk")
-						span.text-hide vk.com/cooltech
-				li.socials-item
-					a(href="#" class="tw")
-						span.text-hide twitter.com/cooltech
-			.head__address ул. Маяковская 6, офис 17
-			.head__phone +7 (921) 123-12-13 &#8381;
+			.head__top-block-wrapper
+
+				+socialsList(socials, socialsLinks, 'head__socials', 'socials-item')
+
+				.head__address ул. Маяковская 6, офис 17
+				.head__phone +7 (921) 123-12-13 &#8381;
 
 			//Логотип
 			.head__logo
 				h1.text-hide COOLTECH
+
+			//Поиск
 			.head__search-form
 				span.text-hide Поиск по каталогу
 				form(id="searchForm", action="/")
 					input(type="text", name="search", class="search-form__input")
 					button(type="submit", name="submit", class="search-form__submit search-form__submit_orange") Найти
 
-			//"Быстрая корзина"
-			ul.head__extras
-				li.extras-item
-					a.extras-item-link(href="#") Карта проезда
-				li.extras-item
-					a.extras-item-link(href="#") История заказов
-				li.extras-item
-					a.extras-item-link(href="#") Корзина
+			//Extras
+			+listSet('head__extras', 'head__extras-item', 'head__extras-link', extras)
 
 			//Основная навигация по магазину
-			ul.head__navigation
-				li.navigation-item
-					a(href="#").navigation-item-link Планшеты
-				li.navigation-item
-					a(href="#").navigation-item-link Мобильные телефоны
-				li.navigation-item
-					a(href="#").navigation-item-link MP3-плееры
-				li.navigation-item
-					a(href="#").navigation-item-link Персональные компьютеры
-				li.navigation-item
-					a(href="#").navigation-item-link Ноутбуки
-				li.navigation-item
-					a(href="#").navigation-item-link Аксессуары
-				li.navigation-item
-					a(href="#").navigation-item-link Бытовая техника
+			+listSet('head__navigation', 'head__navigation-item', 'head__navigation-item-link', mainNav)
 
 			//Breadcrumbs
 			ul.head__bcrumbs.head__bcrumbs_inline
-				li.bcrumbs-item
-					a.bcrumbs-link(href="#") Главная
-				li.bcrumbs-item
-					a.bcrumbs-link(href="#") Каталог
+				li.head__bcrumbs-item
+					a.head__bcrumbs-link(href="#") Главная
+				li.head__bcrumbs-item
+					a.head__bcrumbs-link(href="#") Каталог
+
+			//Заголовок страницы
+			h2.page-heading Мобильные телефоны
+
+		//Основной контент
+		.content
+			.left-block
+				
+				//Категории товаров
+				ul.model-type
+					li.model-type__item
+						a(href="#").model-type__item-link Флагманы
+					li.model-type__item
+						a(href="#").model-type__item-link Бюджетная линейка
+
+				//Наличие в магазинах
+				.available
+					h3.available__heading.content-heading Наличие в магазинах
+						span.heading-arrow
+					fieldset.available__filter
+						label.available__filter-label(for="allShop") Во всех магазинах
+							input.available__filter-radio(type="radio" value="" id="allShop")
+						label.available__filter-label(for="nearShop") В ближайшем ко мне магазине
+							input.available__filter-radio.active(type="radio" value="" id="nearShop")
+
+				//Бренды
+				.brands
+					h3.brands__heading.content-heading Бренды
+						span.heading-arrow
+					fieldset.brands__filter
+						label.brands__filter-label.active Lenovo
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Apple
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Samsung
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Asus
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Motorola
+							input.brands__filter-checkbox.brands__filter-checkbox_active(type="checkbox", value="")
+					a.brands__filter-reset#brandsFilterReset(href="#") Сбросить фильтр
+
+				//Цена
+				.price
+					h3.price__heading.content-heading Цена
+						span.heading-arrow
+					fieldset.price__filter
+						label.price__filter-label от
+							input.price__filter-input(type="text", name="from", value="100")
+						label до
+							input.price__filter-input(type="text", name="to", value="13000")
+
+				//Цвет
+				.color
+					h3.color__heading.content-heading Цвет
+						span.heading-arrow
+					fieldset.color__filter
+						label.color__filter-label Красный
+							input.color__filter-input(type="radio")
+						label.color__filter-label Желтый
+							input.color__filter-input(type="radio")
+
+				//Операционные системы
+				.os
+					h3.brands-heading.content-heading Операционные системы
+						span.heading-arrow
+					fieldset.brands__filter
+						label.brands__filter-label.active Android
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active iOS
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Windows Mobile
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Symbian
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+						label.brands__filter-label.active Custom
+							input.brands__filter-checkbox.active(type="checkbox", value="")
+					a.brands__filter-reset#osFilterReset(href="#") Сбросить фильтр
+
+			//Сортировка и отображение
+			.filter
+				form.filter__sort-form
+					label.sort-form-label(for="sortFormSelect") Сортировать по
+						select.sort-form-select(id="sortFormSelect")
+							option.sort-form-option По цене
+
+				//Вид каталога
+				.filter__view Вид каталога
+					a.filter__view-item.active(href="#") 1
+					a.filter__view-item(href="#") 2
+					a.filter__view-item(href="#") 3
+
+
+		include ./jade_includes/_info
+
+
+
+			//Футер
+			footer.footer
+				.footer-content
+					h1.footer-content__logo COOLTECH
+
+					//Социальные сети
+					+socialsList(socials, socialsLinks, 'footer-content__socials', 'footer-content__socials-item')
+
+					//Футер - навигация по магазину
+					+listSet('footer-content__navigation', 'footer-content__navigation-item', 'footer-content__navigation-link', mainNav)
+					
+					//Копирайт
+					.footer-content__copyright All rights reserved. 2015. no copy alowed
 
 
 		script(src="/bower/jquery/jquery.min.js")
