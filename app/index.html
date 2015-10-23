@@ -1,195 +1,199 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>COOLTECH</title>
-    <meta name="viewport" content="width=1140, initial-scale=1.0">
-    <link rel="stylesheet" href="bower/normalize-css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic" rel="stylesheet" type="text/css">
-    <!--modernizr-->
-    <script src="bower/modernizr/modernizr.js"></script>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <!--Соцсети-->
-        <ul class="socials">
-          <li class="socials__item"><a href="#" class="socials__link socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
-          <li class="socials__item"><a href="#" class="socials__link socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
-          <li class="socials__item"><a href="#" class="socials__link socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
-        </ul>
-        <div class="address">ул. Маяковская 6, офис 17</div>
-        <div class="phone">+7 (921) 123-12-13 &#8381;</div>
-        <!--Логотип-->
-        <div class="logo">
-          <h1 class="text-hide">COOLTECH</h1>
-        </div>
-        <!--Поиск-->
-        <div class="head__search-form"><span class="text-hide">Поиск по каталогу</span>
-          <form id="searchForm" action="/">
-            <input type="text" name="search" placeholder="Что будем искать" class="search-form__input">
-            <button type="submit" name="submit" class="search-form__submit search-form__submit_orange">Найти</button>
-          </form>
-        </div>
-        <!--Extras-->
-        <ul class="extras">
-          <li class="extras__item"><a href="#" class="extras__link">Карта проезда</a></li>
-          <li class="extras__item"><a href="#" class="extras__link">История заказов</a></li>
-          <li class="extras__item"><a href="#" class="extras__link">Корзина</a></li>
-        </ul>
-        <!--Основная навигация по магазину-->
-        <ul class="navigation">
-          <li class="navigation__item"><a href="#" class="navigation__link">Планшеты</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Мобильные телефоны</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">MP3-плееры</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Персональные компьютеры</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Ноутбуки</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Аксессуары</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Бытовая техника</a></li>
-        </ul>
-        <!--Breadcrumbs-->
-        <ul class="head__bcrumbs head__bcrumbs_inline">
-          <li class="head__bcrumbs-item"><a href="#" class="head__bcrumbs-link">Главная</a></li>
-          <li class="head__bcrumbs-item"><a href="#" class="head__bcrumbs-link">Каталог</a></li>
-        </ul>
-        <!--Заголовок страницы-->
-        <h2 class="page-heading">Мобильные телефоны</h2>
-      </div>
-    </header>
-    <!--Основной контент-->
-    <div class="content container">
-      <div class="left-block">
-        <!--Категории товаров-->
-        <ul class="model-type">
-          <li class="model-type__item"><a href="#" class="model-type__item-link">Флагманы</a></li>
-          <li class="model-type__item"><a href="#" class="model-type__item-link">Бюджетная линейка</a></li>
-        </ul>
-        <!--Наличие в магазинах-->
-        <div class="available">
-          <h3 class="available__heading content-heading">Наличие в магазинах<span class="heading-arrow"></span></h3>
-          <fieldset class="available__filter">
-            <label for="allShop" class="available__filter-label">Во всех магазинах
-              <input type="radio" value="" id="allShop" class="available__filter-radio">
-            </label>
-            <label for="nearShop" class="available__filter-label">В ближайшем ко мне магазине
-              <input type="radio" value="" id="nearShop" class="available__filter-radio active">
-            </label>
-          </fieldset>
-        </div>
-        <!--Бренды-->
-        <div class="brands">
-          <h3 class="brands__heading content-heading">Бренды<span class="heading-arrow"></span></h3>
-          <fieldset class="brands__filter">
-            <label class="brands__filter-label active">Lenovo
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Apple
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Samsung
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Asus
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Motorola
-              <input type="checkbox" value="" class="brands__filter-checkbox brands__filter-checkbox_active">
-            </label>
-          </fieldset><a id="brandsFilterReset" href="#" class="brands__filter-reset">Сбросить фильтр</a>
-        </div>
-        <!--Цена-->
-        <div class="price">
-          <h3 class="price__heading content-heading">Цена<span class="heading-arrow"></span></h3>
-          <fieldset class="price__filter">
-            <label class="price__filter-label">от
-              <input type="text" name="from" value="100" class="price__filter-input">
-            </label>
-            <label>до
-              <input type="text" name="to" value="13000" class="price__filter-input">
-            </label>
-          </fieldset>
-          <!--Здесь должен быть JS-контроллер-->
-        </div>
-        <!--Цвет-->
-        <div class="color">
-          <h3 class="color__heading content-heading">Цвет<span class="heading-arrow"></span></h3>
-          <fieldset class="color__filter">
-            <label class="color__filter-label">Красный
-              <input type="radio" class="color__filter-input">
-            </label>
-            <label class="color__filter-label">Желтый
-              <input type="radio" class="color__filter-input">
-            </label>
-          </fieldset>
-        </div>
-        <!--Операционные системы-->
-        <div class="os">
-          <h3 class="brands-heading content-heading">Операционные системы<span class="heading-arrow"></span></h3>
-          <fieldset class="brands__filter">
-            <label class="brands__filter-label active">Android
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">iOS
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Windows Mobile
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Symbian
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-            <label class="brands__filter-label active">Custom
-              <input type="checkbox" value="" class="brands__filter-checkbox active">
-            </label>
-          </fieldset><a id="osFilterReset" href="#" class="brands__filter-reset">Сбросить фильтр</a>
-        </div>
-      </div>
-      <!--Сортировка и отображение-->
-      <div class="filter">
-        <form class="filter__sort-form">
-          <label for="sortFormSelect" class="sort-form-label">Сортировать по
-            <select id="sortFormSelect" class="sort-form-select">
-              <option class="sort-form-option">По цене</option>
-            </select>
-          </label>
-        </form>
-        <!--Вид каталога-->
-        <div class="filter__view">Вид каталога<a href="#" class="filter__view-item active">1</a><a href="#" class="filter__view-item">2</a><a href="#" class="filter__view-item">3</a></div>
-      </div>
-      <div class="content__info">
-        <h2>Важная информация</h2>
-        <p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-        <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-        <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-        <p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-        <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-        <p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-      </div>
-      <!--Футер-->
-      <footer class="footer">
-        <div class="container">
-          <h1 class="footer-logo">COOLTECH</h1>
-          <!--Социальные сети-->
-          <ul class="footer-socials">
-            <li class="footer-socials__item"><a href="#" class="footer-socials__link footer-socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
-            <li class="footer-socials__item"><a href="#" class="footer-socials__link footer-socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
-            <li class="footer-socials__item"><a href="#" class="footer-socials__link footer-socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
-          </ul>
-          <!--Футер - навигация по магазину-->
-          <ul class="footer-navigation">
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Планшеты</a></li>
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Мобильные телефоны</a></li>
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">MP3-плееры</a></li>
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Персональные компьютеры</a></li>
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Ноутбуки</a></li>
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Аксессуары</a></li>
-            <li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Бытовая техника</a></li>
-          </ul>
-          <!--Копирайт-->
-          <div class="copyright">All rights reserved. 2015. no copy alowed</div>
-        </div>
-      </footer>
-    </div>
-    <script src="/bower/jquery/jquery.min.js"></script>
-  </body>
+	<head>
+		<title>COOLTECH</title>
+		<meta name="viewport" content="width=1140, initial-scale=1.0">
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic" rel="stylesheet" type="text/css">
+		<!--modernizr-->
+		<script src="bower/modernizr/modernizr.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<!--Соцсети-->
+				<ul class="socials">
+					<li class="socials__item"><a href="http://facebook.com/cooltech" class="socials__link socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
+					<li class="socials__item"><a href="http://vk.com/cooltech" class="socials__link socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
+					<li class="socials__item"><a href="http://twitter.com/cooltech" class="socials__link socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
+				</ul>
+				<div class="contacts">
+					<div class="address">ул. Маяковская 6, офис 17</div>
+					<div class="phone">+7 (921) 123-12-13 &#8381;</div>
+				</div>
+				<!--Логотип-->
+				<div class="logo">
+					<h1 class="text-hide">COOLTECH</h1>
+				</div>
+				<!--Поиск-->
+				<div class="search-form-wrapper">
+					<form id="searchForm" action="/" class="search-form">
+						<input type="text" name="search" placeholder="Что будем искать" class="search-form__input">
+						<button type="submit" name="submit" class="search-form__submit">Найти</button>
+					</form>
+				</div>
+				<!--Extras-->
+				<ul class="extras">
+					<li class="extras__item"><a href="#" class="extras__link">Карта проезда</a></li>
+					<li class="extras__item"><a href="#" class="extras__link">История заказов</a></li>
+					<li class="extras__item"><a href="#" class="extras__link">Корзина</a></li>
+				</ul>
+				<!--Основная навигация по магазину-->
+				<ul class="navigation">
+					<li class="navigation__item"><a href="#" class="navigation__link">Планшеты</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Мобильные телефоны</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">MP3-плееры</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Персональные компьютеры</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Ноутбуки</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Аксессуары</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Бытовая техника</a></li>
+				</ul>
+				<!--Breadcrumbs-->
+				<ul class="head__bcrumbs head__bcrumbs_inline">
+					<li class="head__bcrumbs-item"><a href="#" class="head__bcrumbs-link">Главная</a></li>
+					<li class="head__bcrumbs-item"><a href="#" class="head__bcrumbs-link">Каталог</a></li>
+				</ul>
+				<!--Заголовок страницы-->
+				<h2 class="page-heading">Мобильные телефоны</h2>
+			</div>
+		</header>
+		<!--Основной контент-->
+		<div class="content container">
+			<div class="left-block">
+				<!--Категории товаров-->
+				<ul class="model-type">
+					<li class="model-type__item"><a href="#" class="model-type__item-link">Флагманы</a></li>
+					<li class="model-type__item"><a href="#" class="model-type__item-link">Бюджетная линейка</a></li>
+				</ul>
+				<!--Наличие в магазинах-->
+				<div class="available">
+					<h3 class="available__heading content-heading">Наличие в магазинах<span class="heading-arrow"></span></h3>
+					<fieldset class="available__filter">
+						<label for="allShop" class="available__label">Во всех магазинах
+							<input type="radio" name="available" value="all" id="allShop" class="available__radio">
+						</label>
+						<label for="nearShop" class="available__label">В ближайшем ко мне магазине
+							<input type="radio" name="available" value="near" id="nearShop" class="available__radio">
+						</label>
+					</fieldset>
+				</div>
+				<!--Бренды-->
+				<div class="brands">
+					<h3 class="brands__heading content-heading">Бренды<span class="heading-arrow"></span></h3>
+					<fieldset class="brands__filter">
+						<label class="brands__filter-label active">Lenovo
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Apple
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Samsung
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Asus
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Motorola
+							<input type="checkbox" value="" class="brands__filter-checkbox brands__filter-checkbox_active">
+						</label>
+					</fieldset><a id="brandsFilterReset" href="#" class="brands__filter-reset">Сбросить фильтр</a>
+				</div>
+				<!--Цена-->
+				<div class="price">
+					<h3 class="price__heading content-heading">Цена<span class="heading-arrow"></span></h3>
+					<fieldset class="price__filter">
+						<label class="price__filter-label">от
+							<input type="text" name="from" value="100" class="price__filter-input">
+						</label>
+						<label>до
+							<input type="text" name="to" value="13000" class="price__filter-input">
+						</label>
+					</fieldset>
+					<!--Здесь должен быть JS-контроллер-->
+				</div>
+				<!--Цвет-->
+				<div class="color">
+					<h3 class="color__heading content-heading">Цвет<span class="heading-arrow"></span></h3>
+					<fieldset class="color__filter">
+						<label class="color__filter-label">Красный
+							<input type="radio" class="color__filter-input">
+						</label>
+						<label class="color__filter-label">Желтый
+							<input type="radio" class="color__filter-input">
+						</label>
+					</fieldset>
+				</div>
+				<!--Операционные системы-->
+				<div class="os">
+					<h3 class="brands-heading content-heading">Операционные системы<span class="heading-arrow"></span></h3>
+					<fieldset class="brands__filter">
+						<label class="brands__filter-label active">Android
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">iOS
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Windows Mobile
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Symbian
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+						<label class="brands__filter-label active">Custom
+							<input type="checkbox" value="" class="brands__filter-checkbox active">
+						</label>
+					</fieldset><a id="osFilterReset" href="#" class="brands__filter-reset">Сбросить фильтр</a>
+				</div>
+				<div class="right-block"></div>
+				<!--Сортировка и отображение-->
+				<div class="filter">
+					<form class="sort-form">
+						<label for="sortFormSelect" class="sort-form__label">Сортировать по
+							<select id="sortFormSelect" class="sort-form__select">
+								<option>По цене</option>
+							</select>
+						</label>
+					</form>
+					<!--Вид каталога-->
+					<div class="filter__view">Вид каталога<a href="#" class="filter__view-item active">1</a><a href="#" class="filter__view-item">2</a><a href="#" class="filter__view-item">3</a></div>
+				</div>
+				<p>TEST</p>
+			</div>
+			<div class="content__info">
+				<h2>Важная информация</h2>
+				<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+				<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+			</div>
+			<!--Футер-->
+			<footer class="footer">
+				<div class="container">
+					<h1 class="footer-logo">COOLTECH</h1>
+					<!--Социальные сети-->
+					<ul class="footer-socials">
+						<li class="footer-socials__item"><a href="http://facebook.com/cooltech" class="footer-socials__link footer-socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
+						<li class="footer-socials__item"><a href="http://vk.com/cooltech" class="footer-socials__link footer-socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
+						<li class="footer-socials__item"><a href="http://twitter.com/cooltech" class="footer-socials__link footer-socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
+					</ul>
+					<!--Футер - навигация по магазину-->
+					<ul class="footer-navigation">
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Планшеты</a></li>
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Мобильные телефоны</a></li>
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">MP3-плееры</a></li>
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Персональные компьютеры</a></li>
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Ноутбуки</a></li>
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Аксессуары</a></li>
+						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Бытовая техника</a></li>
+					</ul>
+					<!--Копирайт-->
+					<div class="copyright">All rights reserved. 2015. no copy alowed</div>
+				</div>
+			</footer>
+		</div>
+		<script src="/bower/jquery/jquery.min.js"></script>
+	</body>
 </html>

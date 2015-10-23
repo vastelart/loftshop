@@ -1,4 +1,2 @@
-$ffamily: 'Open Sans', 'Arial', sans-serif;
-
-body {font-family: $ffamily;}
-.container {width: 1140px; margin: 0 auto; padding: 0 20px;}
+@import "compass";
+@import "_blocks/_container";
