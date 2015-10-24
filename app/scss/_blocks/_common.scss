@@ -1,0 +1,23 @@
+$ffamily: 'Open Sans', 'Arial', sans-serif;
+$grayborder: 1px solid #ccc;
+@mixin bordermix($bord) {
+	border: $bord;
+}
+
+body {font-family: $ffamily;}
+
+.container {width: 1140px; margin: 0 auto; padding: 0 20px;}
+
+.left {float: left;}
+.right {float: right;}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.left-block {width: 333px; border: $grayborder;}
+.right-block {width: 743px; border: $grayborder;}

@@ -1,0 +1,13 @@
+- var description = ['Тип SIM-карты', 'Количество SIM-карт', 'Цвет', 'OS', 'Связь 3G', '4G(LTE)', 'GPS-модуль']
+- var count = 0;
+
+mixin model()
+	.model(data-rating="4")
+	.model__slider КАРТИНКИ
+	h4.model__title Samsung GT-I9301I GALAXY S 3
+	ul.model__description
+		each val in description
+			li.model__description-item.clearfix #{val}
+				span.right Текст
+
++model()

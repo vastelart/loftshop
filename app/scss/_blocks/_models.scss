@@ -1,0 +1,8 @@
+@mixin nomargin($marg) {
+	margin: $marg;
+	padding: $marg;
+}
+
+.model {max-width: 500px; border: 1px solid #ccc; @include nomargin(0); display: inline-block;}
+.model__description {@include nomargin(0); list-style-type: none;}
+.model__description-item:nth-child(odd) {background: #e6e6e6;}

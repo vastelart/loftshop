@@ -1,10 +1,11 @@
-doctype html
 
 - var socials = ['fb', 'vk', 'tw']
 - var socialsLinks = {fb: 'facebook.com/cooltech', vk: 'vk.com/cooltech', tw: 'twitter.com/cooltech'}
 - var extras = ['Карта проезда', 'История заказов', 'Корзина']
 - var mainNav = ['Планшеты', 'Мобильные телефоны', 'MP3-плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
 - var colors = ['white', '#cccccc', 'black', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
+- var os = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
+- var brands = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
 
 mixin socialsList(classes, links, blockClass, element, linkClass)
 	ul(class="#{blockClass}")
@@ -20,147 +21,29 @@ mixin listSet(blockClass, element, linkClass, linkText)
 			li(class="#{element}")
 				a(class="#{linkClass}", href="#") #{text}
 
+mixin fieldsetMix(vals, inputType)
+	each val, index in vals
+		label #{val}
+			input(type="#{inputType}", value="")
+
+doctype html
 
 html
-	head
-		title COOLTECH
-		meta(name="viewport" content="width=1140, initial-scale=1.0")
-		link(rel="stylesheet" href="bower/normalize-css/normalize.css")
-		link(rel="stylesheet" href="css/main.css")
-		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic' rel='stylesheet' type='text/css')
-		//modernizr
-		script(src="bower/modernizr/modernizr.js")
+	include ../_blocks/_head
 	body
-		header.header
-			.container
-				//Соцсети
-				+socialsList(socials, socialsLinks, 'socials', 'socials__item', 'socials__link')
-
-				.contacts
-					.address ул. Маяковская 6, офис 17
-					.phone +7 (921) 123-12-13 &#8381;
-
-				//Логотип
-				.logo
-					h1.text-hide COOLTECH
-
-				//Поиск
-				.search-form-wrapper
-					form.search-form(id="searchForm", action="/")
-						input(type="text", name="search", class="search-form__input", placeholder="Что будем искать")
-						button(type="submit", name="submit", class="search-form__submit") Найти
-
-				//Extras
-				+listSet('extras', 'extras__item', 'extras__link', extras)
-
-				//Основная навигация по магазину
-				+listSet('navigation', 'navigation__item', 'navigation__link', mainNav)
-
-				//Breadcrumbs
-				ul.head__bcrumbs.head__bcrumbs_inline
-					li.head__bcrumbs-item
-						a.head__bcrumbs-link(href="#") Главная
-					li.head__bcrumbs-item
-						a.head__bcrumbs-link(href="#") Каталог
-
-				//Заголовок страницы
-				h2.page-heading Мобильные телефоны
+		include ../_blocks/_header
 
 		//Основной контент
-		.content.container
-			.left-block
-				
-				//Категории товаров
-				ul.model-type
-					li.model-type__item
-						a(href="#").model-type__item-link Флагманы
-					li.model-type__item
-						a(href="#").model-type__item-link Бюджетная линейка
+		.content.container.clearfix
+			block left
 
-				//Наличие в магазинах
-				.available
-					h3.available__heading.content-heading Наличие в магазинах
-						span.heading-arrow
-					fieldset.available__filter
-						label.available__label(for="allShop") Во всех магазинах
-							input.available__radio(type="radio" name="available" value="all" id="allShop")
-						label.available__label(for="nearShop") В ближайшем ко мне магазине
-							input.available__radio(type="radio" name="available" value="near" id="nearShop")
+			block right
 
-				//Бренды
-				.brands
-					h3.brands__heading.content-heading Бренды
-						span.heading-arrow
-					fieldset.brands__filter
-						label.brands__filter-label.active Lenovo
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Apple
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Samsung
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Asus
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Motorola
-							input.brands__filter-checkbox.brands__filter-checkbox_active(type="checkbox", value="")
-					a.brands__filter-reset#brandsFilterReset(href="#") Сбросить фильтр
-
-				//Цена
-				.price
-					h3.price__heading.content-heading Цена
-						span.heading-arrow
-					fieldset.price__filter
-						label.price__filter-label от
-							input.price__filter-input(type="text", name="from", value="100")
-						label до
-							input.price__filter-input(type="text", name="to", value="13000")
-					//Здесь должен быть JS-контроллер
-
-				//Цвет
-				.color
-					h3.color__heading.content-heading Цвет
-						span.heading-arrow
-					fieldset.color__filter
-						label.color__filter-label Красный
-							input.color__filter-input(type="radio")
-						label.color__filter-label Желтый
-							input.color__filter-input(type="radio")
-
-				//Операционные системы
-				.os
-					h3.brands-heading.content-heading Операционные системы
-						span.heading-arrow
-					fieldset.brands__filter
-						label.brands__filter-label.active Android
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active iOS
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Windows Mobile
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Symbian
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-						label.brands__filter-label.active Custom
-							input.brands__filter-checkbox.active(type="checkbox", value="")
-					a.brands__filter-reset#osFilterReset(href="#") Сбросить фильтр
+			block about
 
 
-				.right-block
-				//Сортировка и отображение
-				.filter
-					form.sort-form
-						label.sort-form__label(for="sortFormSelect") Сортировать по
-							select.sort-form__select(id="sortFormSelect")
-								option По цене
-
-					//Вид каталога
-					.filter__view Вид каталога
-						a.filter__view-item.active(href="#") 1
-						a.filter__view-item(href="#") 2
-						a.filter__view-item(href="#") 3
-
-				block smori
-
-
-			include ../_includes/_info
+		.container
+			include ../_blocks/_info
 
 
 			//Футер

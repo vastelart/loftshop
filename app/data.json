@@ -1,4 +1,10 @@
-{
-	"cannibal" : "corpse",
-	"nokturnal" : "mortum"
-}
+[
+	{
+		"cannibal" : "corpse",
+		"nokturnal" : "mortum"
+	},
+	{
+		"cannabis" : "corpse",
+		"smashing" : "pumpkins"
+	}
+]

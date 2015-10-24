@@ -8,6 +8,7 @@ var compass = require('gulp-compass');
 var paths = {
 	scss: 'app/scss/**/*.scss',
 	jade: 'app/jade/pages/*.jade',
+	jadeToWatch: 'app/jade/**/*.jade',
 	compass : {
 			configFile  : 'app/config.rb',
 			cssFolder   : 'app/css',
@@ -16,7 +17,7 @@ var paths = {
 		}
 };
  
-gulp.task('serve', ['compass', 'jade', 'watch'], function() {
+gulp.task('serve', ['watch'], function() {
   gulp.src('app')
     .pipe(server({
       livereload: true,
@@ -51,6 +52,6 @@ gulp.task('compass', function() {
 });
 
 gulp.task('watch', function(){
-	gulp.watch(paths.jade, ['jade']);
+	gulp.watch(paths.jadeToWatch, ['jade']);
 	gulp.watch(paths.scss, ['compass']);
 });
