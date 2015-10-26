@@ -1,0 +1,33 @@
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  background: #f4f4f4;
+  font-size: 16px; }
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.text-hide {
+  position: absolute;
+  left: -9999px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.left-block {
+  width: 333px; }
+
+.right-block {
+  width: 743px; }

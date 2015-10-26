@@ -2,13 +2,14 @@
 - var socials = ['fb', 'vk', 'tw']
 - var socialsLinks = {fb: 'facebook.com/cooltech', vk: 'vk.com/cooltech', tw: 'twitter.com/cooltech'}
 - var extras = ['Карта проезда', 'История заказов', 'Корзина']
+- var bcrumbs = ['Главная', 'Каталог']
 - var mainNav = ['Планшеты', 'Мобильные телефоны', 'MP3-плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
 - var colors = ['white', '#cccccc', 'black', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
 - var os = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
 - var brands = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
 
 mixin socialsList(classes, links, blockClass, element, linkClass)
-	ul(class="#{blockClass}")
+	ul(class="#{blockClass} left")
 		each social in socials
 			- var linkTo = socialsLinks['' + social + '']
 			li(class="#{element}")
@@ -47,18 +48,7 @@ html
 
 
 			//Футер
-			footer.footer
-				.container
-					h1.footer-logo COOLTECH
-
-					//Социальные сети
-					+socialsList(socials, socialsLinks, 'footer-socials', 'footer-socials__item', 'footer-socials__link')
-
-					//Футер - навигация по магазину
-					+listSet('footer-navigation', 'footer-navigation__item', 'footer-navigation__link', mainNav)
-					
-					//Копирайт
-					.copyright All rights reserved. 2015. no copy alowed
+			include ../_blocks/_footer
 
 
 		script(src="/bower/jquery/jquery.min.js")

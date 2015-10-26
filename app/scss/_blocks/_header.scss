@@ -1,1 +1,49 @@
-@import "layout/*.png"
+@mixin nomargin($marg) {
+	margin: $marg;
+	padding: $marg;
+}
+
+@mixin borderRadius($radius) {
+	border-radius: $radius;
+}
+
+.logo-wrapper,
+.logo,
+.search-form-wrapper,
+.extras,
+.extras__item,
+.navigation,
+.navigation__item,
+.socials,
+.socials__item,
+.bcrumbs__item,
+.contacts,
+.address,
+.phone {display: inline-block; @include nomargin(0);}
+
+.top-block-wrapper {padding: 25px 0; background: white;}
+.socials {height: 25px;}
+.socials__item {@include nomargin(0); height: 25px;}
+.socials__link {width: 25px; height: 25px; background: black; display: inline-block; @include borderRadius(50%); margin-bottom: 0; margin-right: 15px;}
+
+.address {margin-right: 80px;}
+
+.top-block-wrapper, .logo-search-extras-wrapper, .navigation-wrapper {margin-bottom: 30px;}
+
+.logo-wrapper {height: 35px; width: 238px;}
+.logo {width: 100%; max-width: 100%;}
+.logo-wrapper, .search-form-wrapper {margin-right: 55px;}
+
+.extras {line-height: 2em;}
+
+.search-form-wrapper,.extras {vertical-align: top;}
+.search-form__input, .search-form__submit {height: 35px; box-sizing: border-box;}
+.search-form__input {width: 290px; font-size: 14px; font-weight: light; padding-left: 15px; color: #b2b2b2;}
+.search-form__submit {width: 75px; @include nomargin(0); margin-left: -5px; color: white; background: $orange; border: 0; font-weight: 600;}
+
+.navigation-wrapper {background: white;}
+.navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none;}
+.navigation__link:hover, .navigation__link:focus {background: #e4e2e2; text-decoration: none;}
+.navigation__link:active {background: $orange; color: white; text-decoration: none;}
+
+.bcrumbs {@include nomargin(0);}

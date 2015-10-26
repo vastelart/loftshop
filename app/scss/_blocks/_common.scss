@@ -1,12 +1,16 @@
 $ffamily: 'Open Sans', 'Arial', sans-serif;
 $grayborder: 1px solid #ccc;
+$orange: #ff6e35;
+
 @mixin bordermix($bord) {
 	border: $bord;
 }
 
-body {font-family: $ffamily;}
+body {font-family: $ffamily; background: #f4f4f4; font-size: 16px;}
 
 .container {width: 1140px; margin: 0 auto; padding: 0 20px;}
+
+.text-hide {position: absolute; left: -9999px;}
 
 .left {float: left;}
 .right {float: right;}
@@ -19,5 +23,5 @@ body {font-family: $ffamily;}
     clear: both;
 }
 
-.left-block {width: 333px; border: $grayborder;}
-.right-block {width: 743px; border: $grayborder;}
+.left-block {width: 333px;}
+.right-block {width: 743px;}

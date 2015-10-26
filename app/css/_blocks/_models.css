@@ -1,0 +1,14 @@
+.model {
+  max-width: 500px;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  display: inline-block; }
+
+.model__description {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.model__description-item:nth-child(odd) {
+  background: #e6e6e6; }

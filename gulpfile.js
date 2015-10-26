@@ -4,6 +4,8 @@ var scss = require('gulp-scss');
 var watch = require('gulp-watch');
 var jade = require('gulp-jade');
 var compass = require('gulp-compass');
+var plumber = require('gulp-plumber');
+var livereload = require('gulp-livereload');
 
 var paths = {
 	scss: 'app/scss/**/*.scss',
@@ -17,8 +19,9 @@ var paths = {
 		}
 };
  
-gulp.task('serve', ['watch'], function() {
+gulp.task('serve', function() {
   gulp.src('app')
+  	.pipe(plumber())
     .pipe(server({
       livereload: true,
       open: true
@@ -27,31 +30,35 @@ gulp.task('serve', ['watch'], function() {
 
 gulp.task('scss', function() {
 	gulp.src(paths.scss)
-	.pipe(watch(paths.scss))
+	.pipe(plumber())
 	.pipe(scss({'bundleExec': false}))
-	.pipe(gulp.dest('app/css'));
+	.pipe(gulp.dest('app/css'))
+	.pipe(livereload());
 });
 
 gulp.task('jade', function() {
 	gulp.src(paths.jade)
-	.pipe(watch(paths.jade))
+	.pipe(plumber())
 	.pipe(jade({
 		pretty: '\t'
 	}))
-	.pipe(gulp.dest('app/'));
+	.pipe(gulp.dest('app/'))
+	.pipe(livereload());
 });
 
 gulp.task('compass', function() {
 	gulp.src(paths.scss)
+		.pipe(plumber())
 		.pipe(compass({
 			config_file: paths.compass.configFile,
 			css: paths.compass.cssFolder,
 			sass: paths.compass.scssFolder,
 			image: paths.compass.imgFolder
-		}));
+		}))
+		.pipe(livereload());
 });
 
 gulp.task('watch', function(){
 	gulp.watch(paths.jadeToWatch, ['jade']);
-	gulp.watch(paths.scss, ['compass']);
+	gulp.watch(paths.scss, ['scss']);
 });

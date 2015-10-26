@@ -1,15 +1,19 @@
 header.header
-	.container
-		//Соцсети
-		+socialsList(socials, socialsLinks, 'socials', 'socials__item', 'socials__link')
+	.top-block-wrapper
+		.container.clearfix
+			//Соцсети
+			+socialsList(socials, socialsLinks, 'socials', 'socials__item', 'socials__link')
 
-		.contacts
-			.address ул. Маяковская 6, офис 17
-			.phone +7 (921) 123-12-13 &#8381;
+			.contacts.right
+				.address ул. Маяковская 6, офис 17
+				.phone +7 (921) 123-12-13 &#8381;
+
+	.logo-search-extras-wrapper.container
 
 		//Логотип
-		.logo
-			h1.text-hide COOLTECH ЕПТА
+		.logo-wrapper
+			.logo
+				img(src="../../img/layout/cooltech.png" alt="COOLTECH")
 
 		//Поиск
 		.search-form-wrapper
@@ -20,15 +24,14 @@ header.header
 		//Extras
 		+listSet('extras', 'extras__item', 'extras__link', extras)
 
-		//Основная навигация по магазину
-		+listSet('navigation', 'navigation__item', 'navigation__link', mainNav)
+	.navigation-wrapper
+		.container
+			//Основная навигация по магазину
+			+listSet('navigation', 'navigation__item', 'navigation__link', mainNav)
 
+	.container
 		//Breadcrumbs
-		ul.head__bcrumbs.head__bcrumbs_inline
-			li.head__bcrumbs-item
-				a.head__bcrumbs-link(href="#") Главная
-			li.head__bcrumbs-item
-				a.head__bcrumbs-link(href="#") Каталог
+		+listSet('bcrumbs', 'bcrumbs__item', 'bcrumbs__link', bcrumbs)
 
 		//Заголовок страницы
 		h2.page-heading Мобильные телефоны
