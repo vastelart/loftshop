@@ -1,0 +1,23 @@
+.footer {
+	background: url('../../img/footer_lodyas.png');
+	height: 220px;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo-wrapper {padding: 72px 0;}
+
+.footer-navigation {width: 600px; line-height: 2.5em; text-align: right; margin-right: -25px; font-size: 14px;}
+.footer-navigation__item {display: inline-block; margin-right: 25px;}
+.footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}
+.footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}
+
+.footer-cocials-wrapper {padding: 35px 0;}
+.footer-socials {@include nomargin(0);}
+.footer-socials__item {display: inline-block; margin-left: 25px;}
+.footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}
+
+.copyright-wrapper {border-top: 1px solid #666;}
+.copyright {font-size: 13px; line-height: 2em; color: white;}

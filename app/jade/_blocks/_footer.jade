@@ -1,13 +1,18 @@
 footer.footer
-	.container
-		h1.footer-logo COOLTECH
+	.container.clearfix
+		.left
+			.footer-logo-wrapper
+				img.footer-logo(src="/img/cooltech-footer.png")
 
-		//Социальные сети
-		+socialsList(socials, socialsLinks, 'footer-socials', 'footer-socials__item', 'footer-socials__link')
 
-		//Футер - навигация по магазину
-		+listSet('footer-navigation', 'footer-navigation__item', 'footer-navigation__link', mainNav)
-		
+		.right
+			.footer-cocials-wrapper
+				//Социальные сети
+				+socialsList(socials, socialsLinks, 'footer-socials right', 'footer-socials__item', 'footer-socials__link')
+				
+			//Футер - навигация по магазину
+			+listSet('footer-navigation right', 'footer-navigation__item', 'footer-navigation__link', mainNav)
+
+	.container.clearfix
 		//Копирайт
-		.copyright All rights reserved. 2015. No copy allowed
-		p Инклюда
+		.copyright.text-center All rights reserved. 2015. No copy allowed

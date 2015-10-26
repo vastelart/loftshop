@@ -1,16 +1,56 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  margin: 0 0 220px;
+  /* bottom = footer height */ }
+
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   background: #f4f4f4;
   font-size: 16px; }
+
+.cooltech-accordeon {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 10px 0; }
 
 .container {
   width: 1140px;
   margin: 0 auto;
   padding: 0 20px; }
 
+.content-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative; }
+
+.heading-arrow {
+  position: absolute;
+  display: none;
+  content: " ";
+  height: 11px;
+  width: 18px;
+  background: url("../../img/layout/heading-arrow.png") 0 0 no-repeat;
+  right: -10px;
+  top: 3px;
+  transition: 0.3s; }
+
+.heading-arrow.invert {
+  transform: rotate(180deg);
+  transition: 0.3s; }
+
 .text-hide {
   position: absolute;
   left: -9999px; }
+
+.text-center {
+  text-align: center; }
 
 .left {
   float: left; }
@@ -121,20 +161,59 @@ body {
   padding: 15px;
   display: inline-block;
   color: #333;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: .3s; }
 
 .navigation__link:hover, .navigation__link:focus {
   background: #e4e2e2;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: .3s; }
 
 .navigation__link:active {
   background: #ff6e35;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: .3s; }
 
 .bcrumbs {
   margin: 0;
   padding: 0; }
+
+.left-filter-wrapper {
+  background: white;
+  border: 1px solid #dee1e4;
+  border-radius: 7px; }
+
+.available,
+.brands,
+.price,
+.color,
+.os {
+  padding: 10px 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee1e4;
+  font-size: 14px; }
+
+.model-type {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #dee1e4;
+  margin-bottom: 35px;
+  border-radius: 7px;
+  background: white;
+  overflow: hidden; }
+
+.model-type__link {
+  padding: 15px 15px 15px 30px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: .3s; }
+
+.model-type__link:hover, .model-type__link:active, .model-type__link:focus {
+  background: #d9e5ea;
+  transition: .3s; }
 
 .model {
   max-width: 500px;
@@ -150,3 +229,61 @@ body {
 
 .model__description-item:nth-child(odd) {
   background: #e6e6e6; }
+
+.footer {
+  background: url("../../img/footer_lodyas.png");
+  height: 220px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+
+.footer-logo-wrapper {
+  padding: 72px 0; }
+
+.footer-navigation {
+  width: 600px;
+  line-height: 2.5em;
+  text-align: right;
+  margin-right: -25px;
+  font-size: 14px; }
+
+.footer-navigation__item {
+  display: inline-block;
+  margin-right: 25px; }
+
+.footer-navigation__link {
+  color: white;
+  transition: .3s;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+
+.footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {
+  color: #ccc;
+  transition: .3s; }
+
+.footer-cocials-wrapper {
+  padding: 35px 0; }
+
+.footer-socials {
+  margin: 0;
+  padding: 0; }
+
+.footer-socials__item {
+  display: inline-block;
+  margin-left: 25px; }
+
+.footer-socials__link {
+  height: 43px;
+  width: 43px;
+  display: inline-block;
+  border-radius: 50%;
+  background: white; }
+
+.copyright-wrapper {
+  border-top: 1px solid #666; }
+
+.copyright {
+  font-size: 13px;
+  line-height: 2em;
+  color: white; }

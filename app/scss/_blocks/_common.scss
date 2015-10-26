@@ -1,16 +1,38 @@
-$ffamily: 'Open Sans', 'Arial', sans-serif;
-$grayborder: 1px solid #ccc;
-$orange: #ff6e35;
+@import "../_includes/_vars_mixins";
 
-@mixin bordermix($bord) {
-	border: $bord;
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 220px; /* bottom = footer height */
 }
 
 body {font-family: $ffamily; background: #f4f4f4; font-size: 16px;}
 
+.cooltech-accordeon {border: 0; @include nomargin(0); padding: 10px 0;}
+
 .container {width: 1140px; margin: 0 auto; padding: 0 20px;}
 
+.content-heading {font-size: 16px; font-weight: 600; @include nomargin(0); cursor: pointer; position: relative;}
+.heading-arrow {
+	position: absolute;
+	display: none;
+	content: " ";
+	height: 11px;
+	width: 18px;
+	background: url('../../img/layout/heading-arrow.png') 0 0 no-repeat;
+	right: -10px;
+	top: 3px;
+	transition: $transition;
+}
+.heading-arrow.invert {
+	transform: rotate(180deg);
+	transition: $transition;
+}
+
 .text-hide {position: absolute; left: -9999px;}
+.text-center {text-align: center;}
 
 .left {float: left;}
 .right {float: right;}

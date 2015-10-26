@@ -1,31 +1,4 @@
-
-- var socials = ['fb', 'vk', 'tw']
-- var socialsLinks = {fb: 'facebook.com/cooltech', vk: 'vk.com/cooltech', tw: 'twitter.com/cooltech'}
-- var extras = ['Карта проезда', 'История заказов', 'Корзина']
-- var bcrumbs = ['Главная', 'Каталог']
-- var mainNav = ['Планшеты', 'Мобильные телефоны', 'MP3-плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
-- var colors = ['white', '#cccccc', 'black', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
-- var os = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
-- var brands = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
-
-mixin socialsList(classes, links, blockClass, element, linkClass)
-	ul(class="#{blockClass} left")
-		each social in socials
-			- var linkTo = socialsLinks['' + social + '']
-			li(class="#{element}")
-				a(class="#{linkClass} #{linkClass}_#{social}", href="http://#{linkTo}")
-					span.text-hide= linkTo
-
-mixin listSet(blockClass, element, linkClass, linkText)
-	ul(class="#{blockClass}")
-		each text in linkText
-			li(class="#{element}")
-				a(class="#{linkClass}", href="#") #{text}
-
-mixin fieldsetMix(vals, inputType)
-	each val, index in vals
-		label #{val}
-			input(type="#{inputType}", value="")
+include ../_includes/_mixins
 
 doctype html
 
@@ -47,8 +20,10 @@ html
 			include ../_blocks/_info
 
 
-			//Футер
-			include ../_blocks/_footer
+		//Футер
+		include ../_blocks/_footer
 
 
-		script(src="/bower/jquery/jquery.min.js")
+		script(src="/bower/jquery/jquery.min.js", defer)
+		//Scripts
+		script(src="/js/phones.js", defer)

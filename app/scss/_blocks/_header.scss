@@ -1,11 +1,4 @@
-@mixin nomargin($marg) {
-	margin: $marg;
-	padding: $marg;
-}
-
-@mixin borderRadius($radius) {
-	border-radius: $radius;
-}
+@import "../_includes/_vars_mixins";
 
 .logo-wrapper,
 .logo,
@@ -24,7 +17,7 @@
 .top-block-wrapper {padding: 25px 0; background: white;}
 .socials {height: 25px;}
 .socials__item {@include nomargin(0); height: 25px;}
-.socials__link {width: 25px; height: 25px; background: black; display: inline-block; @include borderRadius(50%); margin-bottom: 0; margin-right: 15px;}
+.socials__link {width: 25px; height: 25px; background: black; display: inline-block; @include borderRadiusMix(50%); margin-bottom: 0; margin-right: 15px;}
 
 .address {margin-right: 80px;}
 
@@ -42,8 +35,8 @@
 .search-form__submit {width: 75px; @include nomargin(0); margin-left: -5px; color: white; background: $orange; border: 0; font-weight: 600;}
 
 .navigation-wrapper {background: white;}
-.navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none;}
-.navigation__link:hover, .navigation__link:focus {background: #e4e2e2; text-decoration: none;}
-.navigation__link:active {background: $orange; color: white; text-decoration: none;}
+.navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none; transition: .3s;}
+.navigation__link:hover, .navigation__link:focus {background: #e4e2e2; text-decoration: none; transition: .3s;}
+.navigation__link:active {background: $orange; color: white; text-decoration: none; transition: .3s;}
 
 .bcrumbs {@include nomargin(0);}

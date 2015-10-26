@@ -1,0 +1,17 @@
+$ffamily: 'Open Sans', 'Arial', sans-serif;
+$grayborder: 1px solid #ccc;
+$orange: #ff6e35;
+$transition: .3s;
+
+@mixin bordermix($bord) {
+	border: $bord;
+}
+
+@mixin borderRadiusMix($bradius) {
+	border-radius: $bradius;
+}
+
+@mixin nomargin($marg) {
+	margin: $marg;
+	padding: $marg;
+}

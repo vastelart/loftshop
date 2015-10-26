@@ -3,54 +3,55 @@
 	//Категории товаров
 	ul.model-type
 		li.model-type__item
-			a(href="#").model-type__item-link Флагманы
+			a(href="#").model-type__link Флагманы
 		li.model-type__item
-			a(href="#").model-type__item-link Бюджетная линейка
+			a(href="#").model-type__link Бюджетная линейка
 
-	//Наличие в магазинах
-	.available
-		h3.available__heading.content-heading Наличие в магазинах
-			span.heading-arrow
-		fieldset.available__filter
-			label.available__label(for="allShop") Во всех магазинах
-				input.available__radio(type="radio" name="available" value="all" id="allShop")
-			label.available__label(for="nearShop") В ближайшем ко мне магазине
-				input.available__radio(type="radio" name="available" value="near" id="nearShop")
+	.left-filter-wrapper
+		//Наличие в магазинах
+		.available
+			h3.available__heading.content-heading Наличие в магазинах
+				span.heading-arrow
+			fieldset.available__filter.cooltech-accordeon
+				label.available__label(for="allShop") Во всех магазинах
+					input.available__radio(type="radio" name="available" value="all" id="allShop")
+				label.available__label(for="nearShop") В ближайшем ко мне магазине
+					input.available__radio(type="radio" name="available" value="near" id="nearShop")
 
-	//Бренды
-	.brands
-		h3.brands__heading.content-heading Бренды
-			span.heading-arrow
-		fieldset.brands__filter
-			+fieldsetMix(brands, 'checkbox')
-		a.brands__filter-reset#brandsFilterReset(href="#") Сбросить фильтр
+		//Бренды
+		.brands
+			h3.brands__heading.content-heading Бренды
+				span.heading-arrow
+			fieldset.brands__filter.cooltech-accordeon
+				+fieldsetMix(brands, 'checkbox')
+				a.brands__filter-reset#brandsFilterReset(href="#") Сбросить фильтр
 
 
-	//Цена
-	.price
-		h3.price__heading.content-heading Цена
-			span.heading-arrow
-		fieldset.price__filter
-			label.price__filter-label от
-				input.price__filter-input(type="text", name="from", value="100")
-			label до
-				input.price__filter-input(type="text", name="to", value="13000")
-		//Здесь должен быть JS-контроллер
+		//Цена
+		.price
+			h3.price__heading.content-heading Цена
+				span.heading-arrow
+			fieldset.price__filter.cooltech-accordeon
+				label.price__filter-label от
+					input.price__filter-input(type="text", name="from", value="100")
+				label до
+					input.price__filter-input(type="text", name="to", value="13000")
+			//Здесь должен быть JS-контроллер
 
-	//Цвет
-	.color
-		h3.color__heading.content-heading Цвет
-			span.heading-arrow
-		fieldset.color__filter
-			label.color__filter-label Красный
-				input.color__filter-input(type="radio")
-			label.color__filter-label Желтый
-				input.color__filter-input(type="radio")
+		//Цвет
+		.color
+			h3.color__heading.content-heading Цвет
+				span.heading-arrow
+			fieldset.color__filter.cooltech-accordeon
+				label.color__filter-label Красный
+					input.color__filter-input(type="radio")
+				label.color__filter-label Желтый
+					input.color__filter-input(type="radio")
 
-	//Операционные системы
-	.os
-		h3.os__heading.content-heading Операционные системы
-			span.heading-arrow
-		fieldset.os__filter
-			+fieldsetMix(os, 'checkbox')
-		a.os__filter-reset#osFilterReset(href="#") Сбросить фильтр
+		//Операционные системы
+		.os
+			h3.os__heading.content-heading Операционные системы
+				span.heading-arrow
+			fieldset.os__filter.cooltech-accordeon
+				+fieldsetMix(os, 'checkbox')
+				a.os__filter-reset#osFilterReset(href="#") Сбросить фильтр

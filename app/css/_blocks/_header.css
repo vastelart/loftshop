@@ -1,65 +1,106 @@
-/*
-Error: Undefined variable: "$orange".
-        on line 42 of c:\WebServers\home\loftshop\app\scss\_blocks\_header.scss
+.logo-wrapper,
+.logo,
+.search-form-wrapper,
+.extras,
+.extras__item,
+.navigation,
+.navigation__item,
+.socials,
+.socials__item,
+.bcrumbs__item,
+.contacts,
+.address,
+.phone {
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
 
-37: .extras {line-height: 2em;}
-38: 
-39: .search-form-wrapper,.extras {vertical-align: top;}
-40: .search-form__input, .search-form__submit {height: 35px; box-sizing: border-box;}
-41: .search-form__input {width: 290px; font-size: 14px; font-weight: light; padding-left: 15px; color: #b2b2b2;}
-42: .search-form__submit {width: 75px; @include nomargin(0); margin-left: -5px; color: white; background: $orange; border: 0; font-weight: 600;}
-43: 
-44: .navigation-wrapper {background: white;}
-45: .navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none;}
-46: .navigation__link:hover, .navigation__link:focus {background: #e4e2e2; text-decoration: none;}
-47: .navigation__link:active {background: $orange; color: white; text-decoration: none;}
+.top-block-wrapper {
+  padding: 25px 0;
+  background: white; }
 
-Backtrace:
-c:\WebServers\home\loftshop\app\scss\_blocks\_header.scss:42
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `map'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/bin/scss:13:in `<top (required)>'
-c:/Ruby22-x64/bin/scss:23:in `load'
-c:/Ruby22-x64/bin/scss:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$orange\".\A         on line 42 of c:\WebServers\home\loftshop\app\scss\_blocks\_header.scss\A \A 37: .extras {line-height: 2em;}\A 38: \A 39: .search-form-wrapper,.extras {vertical-align: top;}\A 40: .search-form__input, .search-form__submit {height: 35px; box-sizing: border-box;}\A 41: .search-form__input {width: 290px; font-size: 14px; font-weight: light; padding-left: 15px; color: #b2b2b2;}\A 42: .search-form__submit {width: 75px; @include nomargin(0); margin-left: -5px; color: white; background: $orange; border: 0; font-weight: 600;}\A 43: \A 44: .navigation-wrapper {background: white;}\A 45: .navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none;}\A 46: .navigation__link:hover, .navigation__link:focus {background: #e4e2e2; text-decoration: none;}\A 47: .navigation__link:active {background: $orange; color: white; text-decoration: none;}"; }
+.socials {
+  height: 25px; }
+
+.socials__item {
+  margin: 0;
+  padding: 0;
+  height: 25px; }
+
+.socials__link {
+  width: 25px;
+  height: 25px;
+  background: black;
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 0;
+  margin-right: 15px; }
+
+.address {
+  margin-right: 80px; }
+
+.top-block-wrapper, .logo-search-extras-wrapper, .navigation-wrapper {
+  margin-bottom: 30px; }
+
+.logo-wrapper {
+  height: 35px;
+  width: 238px; }
+
+.logo {
+  width: 100%;
+  max-width: 100%; }
+
+.logo-wrapper, .search-form-wrapper {
+  margin-right: 55px; }
+
+.extras {
+  line-height: 2em; }
+
+.search-form-wrapper, .extras {
+  vertical-align: top; }
+
+.search-form__input, .search-form__submit {
+  height: 35px;
+  box-sizing: border-box; }
+
+.search-form__input {
+  width: 290px;
+  font-size: 14px;
+  font-weight: light;
+  padding-left: 15px;
+  color: #b2b2b2; }
+
+.search-form__submit {
+  width: 75px;
+  margin: 0;
+  padding: 0;
+  margin-left: -5px;
+  color: white;
+  background: #ff6e35;
+  border: 0;
+  font-weight: 600; }
+
+.navigation-wrapper {
+  background: white; }
+
+.navigation__link {
+  padding: 15px;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  transition: .3s; }
+
+.navigation__link:hover, .navigation__link:focus {
+  background: #e4e2e2;
+  text-decoration: none;
+  transition: .3s; }
+
+.navigation__link:active {
+  background: #ff6e35;
+  color: white;
+  text-decoration: none;
+  transition: .3s; }
+
+.bcrumbs {
+  margin: 0;
+  padding: 0; }

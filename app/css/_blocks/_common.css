@@ -1,16 +1,56 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  margin: 0 0 220px;
+  /* bottom = footer height */ }
+
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   background: #f4f4f4;
   font-size: 16px; }
+
+.cooltech-accordeon {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding: 10px 0; }
 
 .container {
   width: 1140px;
   margin: 0 auto;
   padding: 0 20px; }
 
+.content-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  position: relative; }
+
+.heading-arrow {
+  position: absolute;
+  display: none;
+  content: " ";
+  height: 11px;
+  width: 18px;
+  background: url("../../img/layout/heading-arrow.png") 0 0 no-repeat;
+  right: -10px;
+  top: 3px;
+  transition: 0.3s; }
+
+.heading-arrow.invert {
+  transform: rotate(180deg);
+  transition: 0.3s; }
+
 .text-hide {
   position: absolute;
   left: -9999px; }
+
+.text-center {
+  text-align: center; }
 
 .left {
   float: left; }
