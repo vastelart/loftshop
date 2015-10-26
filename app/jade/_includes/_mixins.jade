@@ -6,6 +6,16 @@
 - var colors = ['white', '#cccccc', 'black', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
 - var os = ['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom']
 - var brands = ['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola']
+- var colors = ['Красный', 'Желтый', 'Зеленый']
+
+mixin filterLeft(mainBlock, headnigText, fieldsetInputType, fieldsetLabelNames)
+	div(class="#{mainBlock}")
+		h3(class="#{mainBlock}__heading content-heading") #{headingText}
+			span.heading-arrow
+		fieldset(class="#{mainBlock}__filter cooltech-accordeon")
+			each labelName in fieldsetLabelNames
+				label(class="#{mainBlock}__filter-label") #{labelName}
+					input(class="#{mainBlock}__filter-input", type="#{fieldsetInputType}")
 
 mixin socialsList(classes, links, blockClass, element, linkClass)
 	ul(class="#{blockClass} left")

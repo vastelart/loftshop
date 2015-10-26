@@ -9,5 +9,5 @@
 .os {padding: 10px 25px; padding-bottom: 15px; border-bottom: 1px solid #dee1e4; font-size: 14px;}
 
 .model-type {list-style-type: none; @include nomargin(0); border: 1px solid #dee1e4; margin-bottom: 35px; border-radius: 7px; background: white; overflow: hidden;}
-.model-type__link {padding: 15px 15px 15px 30px; display: block; text-decoration: none; color: #333; transition: .3s;}
+.model-type__link {padding: 15px 15px 15px 30px; display: block; text-decoration: none; color: #333; transition: .3s; border-bottom: 1px solid #dee1e4;}
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {background: #d9e5ea; transition: .3s;}

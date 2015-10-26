@@ -28,7 +28,8 @@
   display: block;
   text-decoration: none;
   color: #333;
-  transition: .3s; }
+  transition: .3s;
+  border-bottom: 1px solid #dee1e4; }
 
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {
   background: #d9e5ea;

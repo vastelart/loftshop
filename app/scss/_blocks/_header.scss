@@ -25,18 +25,20 @@
 
 .logo-wrapper {height: 35px; width: 238px;}
 .logo {width: 100%; max-width: 100%;}
-.logo-wrapper, .search-form-wrapper {margin-right: 55px;}
+.logo-wrapper, .search-form-wrapper {margin-right: 50px;}
 
 .extras {line-height: 2em;}
+.extras__item {margin-right: 30px;}
+.extras__item:last-child {margin-right: 0;}
 
 .search-form-wrapper,.extras {vertical-align: top;}
 .search-form__input, .search-form__submit {height: 35px; box-sizing: border-box;}
-.search-form__input {width: 290px; font-size: 14px; font-weight: light; padding-left: 15px; color: #b2b2b2;}
+.search-form__input {width: 290px; font-size: 14px; font-weight: light; padding-left: 15px; color: #b2b2b2;  @include bordermix(1px solid #dee1e4);}
 .search-form__submit {width: 75px; @include nomargin(0); margin-left: -5px; color: white; background: $orange; border: 0; font-weight: 600;}
 
 .navigation-wrapper {background: white;}
 .navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none; transition: .3s;}
-.navigation__link:hover, .navigation__link:focus {background: #e4e2e2; text-decoration: none; transition: .3s;}
-.navigation__link:active {background: $orange; color: white; text-decoration: none; transition: .3s;}
+.navigation__link:hover {background: #e4e2e2; text-decoration: none; transition: .3s;}
+.navigation__link:active, .navigation__link:focus {background: $orange; color: white; text-decoration: none; transition: .3s;}
 
 .bcrumbs {@include nomargin(0);}

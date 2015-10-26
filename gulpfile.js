@@ -6,6 +6,7 @@ var jade = require('gulp-jade');
 var compass = require('gulp-compass');
 var plumber = require('gulp-plumber');
 var livereload = require('gulp-livereload');
+var spritesmith = require('gulp.spritesmith');
 
 var paths = {
 	scss: 'app/scss/**/*.scss',
@@ -61,4 +62,13 @@ gulp.task('compass', function() {
 gulp.task('watch', function(){
 	gulp.watch(paths.jadeToWatch, ['jade']);
 	gulp.watch(paths.scss, ['scss']);
+});
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('app/img/socials/*.png').pipe(spritesmith({
+    imgName: 'img/sprite-socials.png',
+    cssName: 'css/sprite-socials.scss',
+    padding: 70
+  }));
+  return spriteData.pipe(gulp.dest('sprite'));
 });

@@ -51,10 +51,16 @@
   max-width: 100%; }
 
 .logo-wrapper, .search-form-wrapper {
-  margin-right: 55px; }
+  margin-right: 50px; }
 
 .extras {
   line-height: 2em; }
+
+.extras__item {
+  margin-right: 30px; }
+
+.extras__item:last-child {
+  margin-right: 0; }
 
 .search-form-wrapper, .extras {
   vertical-align: top; }
@@ -68,7 +74,8 @@
   font-size: 14px;
   font-weight: light;
   padding-left: 15px;
-  color: #b2b2b2; }
+  color: #b2b2b2;
+  border: 1px solid #dee1e4; }
 
 .search-form__submit {
   width: 75px;
@@ -90,12 +97,12 @@
   text-decoration: none;
   transition: .3s; }
 
-.navigation__link:hover, .navigation__link:focus {
+.navigation__link:hover {
   background: #e4e2e2;
   text-decoration: none;
   transition: .3s; }
 
-.navigation__link:active {
+.navigation__link:active, .navigation__link:focus {
   background: #ff6e35;
   color: white;
   text-decoration: none;
