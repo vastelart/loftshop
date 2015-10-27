@@ -3,7 +3,7 @@
 	padding: $marg;
 }
 
-.model {max-width: 500px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white;}
+.model {width: 235px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white;}
 .model:hover {box-shadow: 0 0 10px rgba(black, .3); transition: $transition;}
 .model__title {font-size: 14px;}
 .model__description {@include nomargin(0); list-style-type: none;}
