@@ -21,7 +21,7 @@
 					</ul>
 					<div class="contacts right">
 						<div class="address">ул. Маяковская 6, офис 17</div>
-						<div class="phone">+7 (921) 123-12-13 &#8381;</div>
+						<div class="phone">+7 (921) 123-12-13</div>
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 					</form>
 				</div>
 				<!--Extras-->
-				<ul class="extras">
+				<ul class="extras right">
 					<li class="extras__item"><a href="#" class="extras__link">Карта проезда</a></li>
 					<li class="extras__item"><a href="#" class="extras__link">История заказов</a></li>
 					<li class="extras__item"><a href="#" class="extras__link">Корзина</a></li>
@@ -79,7 +79,7 @@
 				<div class="left-filter-wrapper">
 					<!--Наличие в магазинах-->
 					<div class="available">
-						<h3 class="available__heading content-heading">Наличие в магазинах1<span class="heading-arrow"></span></h3>
+						<h3 class="available__heading content-heading">Наличие в магазинах<span class="heading-arrow"></span></h3>
 						<fieldset class="available__filter cooltech-accordeon">
 							<label for="allShop" class="available__label">Во всех магазинах
 								<input type="radio" name="available" value="all" id="allShop" class="available__radio">
@@ -160,16 +160,20 @@
 			</div>
 			<div class="right-block right">
 				<!--Сортировка и отображение-->
-				<div class="filter">
-					<form class="filter__sort">
+				<div class="filter clearfix">
+					<fieldset class="filter__sort">
 						<label for="sortFormSelect" class="sort-form__label">Сортировать по
 							<select id="sortFormSelect" class="sort-form__select">
 								<option>По цене</option>
 							</select>
 						</label>
-					</form>
+					</fieldset>
 					<!--Вид каталога-->
-					<div class="filter__view">Вид каталога<a href="#" class="filter__view-item active">1</a><a href="#" class="filter__view-item">2</a><a href="#" class="filter__view-item">3</a></div>
+					<ul class="filter__view right">
+						<li class="filter__view-item"><a href="#" data-view="table" class="filter__view-link filter__view-link_active"><span class="text-hide">1</span></a></li>
+						<li class="filter__view-item"><a href="#" data-view="icons" class="filter__view-link"><span class="text-hide">2</span></a></li>
+						<li class="filter__view-item"><a href="#" data-view="list" class="filter__view-link"><span class="text-hide">3</span></a></li>
+					</ul><span class="right">Вид каталога</span>
 				</div>
 				<!--Модели телефонов-->
 								<div data-rating="4" class="model"></div>

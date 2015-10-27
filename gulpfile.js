@@ -65,9 +65,9 @@ gulp.task('watch', function(){
 });
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('app/img/socials/*.png').pipe(spritesmith({
-    imgName: 'img/sprite-socials.png',
-    cssName: 'css/sprite-socials.scss',
+  var spriteData = gulp.src('app/img/layout/*.png').pipe(spritesmith({
+    imgName: 'img/sprite-layout.png',
+    cssName: 'sprite-layout.css',
     padding: 70
   }));
   return spriteData.pipe(gulp.dest('sprite'));

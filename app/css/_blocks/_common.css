@@ -65,9 +65,3 @@ body {
 
 .clearfix:after {
   clear: both; }
-
-.left-block {
-  width: 333px; }
-
-.right-block {
-  width: 743px; }

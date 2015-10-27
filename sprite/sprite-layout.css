@@ -1,0 +1,71 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-checkbox_checked {
+  background-image: url(img/sprite-layout.png);
+  background-position: 0px 0px;
+  width: 19px;
+  height: 19px;
+}
+.icon-checkbox_unchecked {
+  background-image: url(img/sprite-layout.png);
+  background-position: -89px 0px;
+  width: 19px;
+  height: 19px;
+}
+.icon-heading-arrow {
+  background-image: url(img/sprite-layout.png);
+  background-position: -86px -178px;
+  width: 18px;
+  height: 11px;
+}
+.icon-map-pin {
+  background-image: url(img/sprite-layout.png);
+  background-position: -264px 0px;
+  width: 12px;
+  height: 16px;
+}
+.icon-radio_checked {
+  background-image: url(img/sprite-layout.png);
+  background-position: 0px -89px;
+  width: 19px;
+  height: 19px;
+}
+.icon-radio_unchecked {
+  background-image: url(img/sprite-layout.png);
+  background-position: -89px -89px;
+  width: 19px;
+  height: 19px;
+}
+.icon-telephone {
+  background-image: url(img/sprite-layout.png);
+  background-position: -264px -86px;
+  width: 12px;
+  height: 16px;
+}
+.icon-view-list1 {
+  background-image: url(img/sprite-layout.png);
+  background-position: -178px 0px;
+  width: 16px;
+  height: 16px;
+}
+.icon-view-list2 {
+  background-image: url(img/sprite-layout.png);
+  background-position: -178px -86px;
+  width: 16px;
+  height: 16px;
+}
+.icon-view-list3 {
+  background-image: url(img/sprite-layout.png);
+  background-position: 0px -178px;
+  width: 16px;
+  height: 16px;
+}

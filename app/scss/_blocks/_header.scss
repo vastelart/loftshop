@@ -17,9 +17,46 @@
 .top-block-wrapper {padding: 25px 0; background: white;}
 .socials {height: 25px;}
 .socials__item {@include nomargin(0); height: 25px;}
-.socials__link {width: 25px; height: 25px; background: black; display: inline-block; @include borderRadiusMix(50%); margin-bottom: 0; margin-right: 15px;}
+.socials__link {width: 25px; height: 25px; display: inline-block; background-color: black; @include borderRadiusMix(50%); margin-bottom: 0; margin-right: 15px;}
 
-.address {margin-right: 80px;}
+.socials__link_fb {
+  background-image: url(../../img/sprite-socials.png);
+  background-position: -271px -82px;
+  background-repeat: no-repeat;
+}
+.socials__link_fb:hover {
+  background-image: url(../../img/sprite-socials.png);
+  background-position: -271px -164px;
+  background-repeat: no-repeat;
+}
+
+.address {margin-right: 80px; position: relative;}
+.address:before {
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 2px;
+	content: " ";
+	width: 20px;
+	height: 20px;
+	background-image: url(../../img/sprite-layout.png);
+  	background-position: -264px 0px;
+  	background-repeat: no-repeat;
+}
+
+.phone {position: relative;}
+.phone:before {
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 0;
+	content: " ";
+	width: 20px;
+	height: 20px;
+	background-image: url(../../img/sprite-layout.png);
+  	background-position: -264px -86px;
+  	background-repeat: no-repeat;
+}
 
 .top-block-wrapper, .logo-search-extras-wrapper, .navigation-wrapper {margin-bottom: 30px;}
 
@@ -30,6 +67,8 @@
 .extras {line-height: 2em;}
 .extras__item {margin-right: 30px;}
 .extras__item:last-child {margin-right: 0;}
+.extras__link {color: #333; text-decoration: none; border-bottom: 1px solid rgba(50,50,50,.5); transition: $transition;}
+.extras__link:hover, .extras__link:active, .extras__link:focus {color: $orange; text-decoration: none; border-bottom: 1px solid transparentize($orange, .5); transition: $transition;}
 
 .search-form-wrapper,.extras {vertical-align: top;}
 .search-form__input, .search-form__submit {height: 35px; box-sizing: border-box;}

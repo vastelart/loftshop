@@ -1,5 +1,7 @@
 @import "../_includes/_vars_mixins";
 
+.left-block {width: 333px;}
+
 .left-filter-wrapper {background: white; @include bordermix(1px solid #dee1e4); @include borderRadiusMix(7px);}
 
 .available,
