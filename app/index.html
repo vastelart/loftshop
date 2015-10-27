@@ -93,66 +93,62 @@
 					<div class="brands">
 						<h3 class="brands__heading content-heading">Бренды<span class="heading-arrow"></span></h3>
 						<fieldset class="brands__filter cooltech-accordeon">
-							<label>Lenovo
-								<input type="checkbox" value=""/>
+							<label class="brands__filter-label">Lenovo
+								<input type="checkbox" value="" class="brands__filter-input"/>
 							</label>
-							<label>Apple
-								<input type="checkbox" value=""/>
+							<label class="brands__filter-label">Apple
+								<input type="checkbox" value="" class="brands__filter-input"/>
 							</label>
-							<label>Samsung
-								<input type="checkbox" value=""/>
+							<label class="brands__filter-label">Samsung
+								<input type="checkbox" value="" class="brands__filter-input"/>
 							</label>
-							<label>Asus
-								<input type="checkbox" value=""/>
+							<label class="brands__filter-label">Asus
+								<input type="checkbox" value="" class="brands__filter-input"/>
 							</label>
-							<label>Motorola
-								<input type="checkbox" value=""/>
+							<label class="brands__filter-label">Motorola
+								<input type="checkbox" value="" class="brands__filter-input"/>
 							</label><a id="brandsFilterReset" href="#" class="brands__filter-reset">Сбросить фильтр</a>
 						</fieldset>
 					</div>
 					<!--Цена-->
 					<div class="price">
 						<h3 class="price__heading content-heading">Цена<span class="heading-arrow"></span></h3>
-						<fieldset class="price__filter cooltech-accordeon">
-							<label class="price__filter-label">от
-								<input type="text" name="from" value="100" class="price__filter-input">
-							</label>
-							<label>до
-								<input type="text" name="to" value="13000" class="price__filter-input">
-							</label>
-						</fieldset>
+						<!--fieldset.price__filter.cooltech-accordeon
+						label.price__filter-label от
+							input.price__filter-input(type="text", name="from", value="100")
+						label до
+							input.price__filter-input(type="text", name="to", value="13000")
+						-->
 						<!--Здесь должен быть JS-контроллер-->
 					</div>
 					<!--Цвет-->
 					<div class="color">
 						<h3 class="color__heading content-heading">Цвет<span class="heading-arrow"></span></h3>
-						<fieldset class="color__filter cooltech-accordeon">
-							<label class="color__filter-label">Красный
-								<input type="radio" class="color__filter-input">
-							</label>
-							<label class="color__filter-label">Желтый
-								<input type="radio" class="color__filter-input">
-							</label>
-						</fieldset>
+						<!--fieldset.color__filter.cooltech-accordeon
+						label.color__filter-label Красный
+							input.color__filter-input(type="radio")
+						label.color__filter-label Желтый
+							input.color__filter-input(type="radio")
+						-->
 					</div>
 					<!--Операционные системы-->
 					<div class="os">
 						<h3 class="os__heading content-heading">Операционные системы<span class="heading-arrow"></span></h3>
 						<fieldset class="os__filter cooltech-accordeon">
-							<label>Android
-								<input type="checkbox" value=""/>
+							<label class="os__filter-label">Android
+								<input type="checkbox" value="" class="os__filter-input"/>
 							</label>
-							<label>iOS
-								<input type="checkbox" value=""/>
+							<label class="os__filter-label">iOS
+								<input type="checkbox" value="" class="os__filter-input"/>
 							</label>
-							<label>Windows Mobile
-								<input type="checkbox" value=""/>
+							<label class="os__filter-label">Windows Mobile
+								<input type="checkbox" value="" class="os__filter-input"/>
 							</label>
-							<label>Symbian
-								<input type="checkbox" value=""/>
+							<label class="os__filter-label">Symbian
+								<input type="checkbox" value="" class="os__filter-input"/>
 							</label>
-							<label>Custom
-								<input type="checkbox" value=""/>
+							<label class="os__filter-label">Custom
+								<input type="checkbox" value="" class="os__filter-input"/>
 							</label><a id="osFilterReset" href="#" class="os__filter-reset">Сбросить фильтр</a>
 						</fieldset>
 					</div>
@@ -177,16 +173,16 @@
 				</div>
 				<!--Модели телефонов-->
 								<div data-rating="4" class="model model_view-icons">
-									<div class="model__slider">КАРТИНКИ</div>
+									<div class="model__slider">слайдер</div>
 									<h4 class="model__title">Samsung GT-I9301I GALAXY S 3</h4>
 									<ul class="model__description">
-										<li class="model__description-item clearfix">Тип SIM-карты<span class="right">Текст</span></li>
-										<li class="model__description-item clearfix">Количество SIM-карт<span class="right">Текст</span></li>
-										<li class="model__description-item clearfix">Цвет<span class="right">Текст</span></li>
-										<li class="model__description-item clearfix">OS<span class="right">Текст</span></li>
-										<li class="model__description-item clearfix">Связь 3G<span class="right">Текст</span></li>
-										<li class="model__description-item clearfix">4G(LTE)<span class="right">Текст</span></li>
-										<li class="model__description-item clearfix">GPS-модуль<span class="right">Текст</span></li>
+										<li class="model__description-item clearfix">Тип SIM-карты<span class="right">...</span></li>
+										<li class="model__description-item clearfix">Количество SIM-карт<span class="right">...</span></li>
+										<li class="model__description-item clearfix">Цвет<span class="right">...</span></li>
+										<li class="model__description-item clearfix">OS<span class="right">...</span></li>
+										<li class="model__description-item clearfix">Связь 3G<span class="right">...</span></li>
+										<li class="model__description-item clearfix">4G(LTE)<span class="right">...</span></li>
+										<li class="model__description-item clearfix">GPS-модуль<span class="right">...</span></li>
 									</ul>
 									<div class="rating-wrapper">
 										<ul class="rating">
@@ -197,6 +193,7 @@
 											<li class="rating__star-unfilled"></li>
 										</ul><span class="rating__count">4</span>
 									</div>
+									<div class="model__price">8 990<span class="rouble">&#8381;</span></div>
 									<div class="available-btn-wrapper clearfix">
 										<div class="available-mark available-mark_true">В наличии</div>
 										<button class="btn btn-bucket right">В корзину</button>
@@ -217,35 +214,36 @@
 		</div>
 		<!--Футер-->
 		<footer class="footer">
-			<div class="container clearfix">
-				<div class="left">
-					<div class="footer-logo-wrapper"><img src="/img/cooltech-footer.png" class="footer-logo"></div>
-				</div>
-				<div class="right">
-					<div class="footer-cocials-wrapper">
-						<!--Социальные сети-->
-						<ul class="footer-socials right left">
-							<li class="footer-socials__item"><a href="http://facebook.com/cooltech" class="footer-socials__link footer-socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
-							<li class="footer-socials__item"><a href="http://vk.com/cooltech" class="footer-socials__link footer-socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
-							<li class="footer-socials__item"><a href="http://twitter.com/cooltech" class="footer-socials__link footer-socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
+			<div class="container">
+				<div class="clearfix">
+					<div class="left">
+						<div class="footer-logo-wrapper"><img src="/img/cooltech-footer.png" class="footer-logo"></div>
+					</div>
+					<div class="right">
+						<div class="footer-cocials-wrapper">
+							<!--Социальные сети-->
+							<ul class="footer-socials right left">
+								<li class="footer-socials__item"><a href="http://facebook.com/cooltech" class="footer-socials__link footer-socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
+								<li class="footer-socials__item"><a href="http://vk.com/cooltech" class="footer-socials__link footer-socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
+								<li class="footer-socials__item"><a href="http://twitter.com/cooltech" class="footer-socials__link footer-socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
+							</ul>
+						</div>
+						<!--Футер - навигация по магазину-->
+						<ul class="footer-navigation right">
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Планшеты</a></li>
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Мобильные телефоны</a></li>
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">MP3-плееры</a></li>
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Персональные компьютеры</a></li>
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Ноутбуки</a></li>
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Аксессуары</a></li>
+							<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Бытовая техника</a></li>
 						</ul>
 					</div>
-					<!--Футер - навигация по магазину-->
-					<ul class="footer-navigation right">
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Планшеты</a></li>
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Мобильные телефоны</a></li>
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">MP3-плееры</a></li>
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Персональные компьютеры</a></li>
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Ноутбуки</a></li>
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Аксессуары</a></li>
-						<li class="footer-navigation__item"><a href="#" class="footer-navigation__link">Бытовая техника</a></li>
-					</ul>
 				</div>
-			</div>
-			<div class="container clearfix">
 				<!--Копирайт-->
 				<div class="copyright text-center">All rights reserved. 2015. No copy allowed</div>
 			</div>
+			<div class="copyright-top-line"></div>
 		</footer>
 		<script src="/bower/jquery/jquery.min.js" defer></script>
 		<!--Scripts-->

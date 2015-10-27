@@ -3,7 +3,7 @@
 	padding: $marg;
 }
 
-.model {max-width: 500px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 10px; transition: $transition; background: white;}
+.model {max-width: 500px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white;}
 .model:hover {box-shadow: 0 0 10px rgba(black, .3); transition: $transition;}
 .model__title {font-size: 14px;}
 .model__description {@include nomargin(0); list-style-type: none;}
@@ -22,11 +22,20 @@
   	background-position: 0px 0px;
   	background-repeat: no-repeat;
 }
-.rating__count {display: inline-block; background: #b5beca; color: white; font-size: 13px; text-align: center; padding: 0 10px; border-radius: 5px; vertical-align: top; margin-top: 2px;}
+.rating__count {display: inline-block; background: #b5beca; color: white; font-size: 12px; text-align: center; padding: 0 10px; border-radius: 7px; vertical-align: top; margin-top: 2px; height: 15px;}
 
-.available-mark {font-size: 12px; font-weight: bold; color: #333; display: inline-block;}
+.model__price {text-align: center; font-weight: 600; margin-bottom: 15px; font-size: 20px;}
+.rouble {font-weight: normal; font-size: 18px; margin-left: 5px;}
+
+.available-mark {font-size: 12px; font-weight: bold; color: #333; display: inline-block; line-height: 3em;}
 .available-mark_true:before {
-	display: block;
+	display: inline-block;
+	content: " ";
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #60ac49;
+	margin: 0 8px;
 }
 
 .btn-bucket {

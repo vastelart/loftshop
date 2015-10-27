@@ -1,19 +1,22 @@
 var phones = (function() {
-	var init = _accordeon();
-
-	function _accordeon() {
+	var init = _setUpListeners();
+	
+	function _setUpListeners() {
 		var heading = $('.content-heading', '.left-block');
 
-		heading.on('click', function(e) {
-			e.preventDefault();
-			$(this).next('.cooltech-accordeon').stop(true, true).slideToggle(300);
-			$(this).find('.heading-arrow').toggleClass('invert');
-		});
-		heading.on('hover', function() {
-			$(this).find('.heading-arrow').stop(true, true).fadeToggle(300);
-		});
+		heading.on('click', _accordeon);
+		heading.on('hover', _arrow);
+	}
+
+	function _accordeon() {
+		$(this).next('.cooltech-accordeon').stop(true, true).slideToggle(300);
+		$(this).find('.heading-arrow').toggleClass('invert');
 
 		console.log('ACCORDEON');
+	}
+
+	function _arrow() {
+		$(this).find('.heading-arrow').stop(true, true).fadeToggle(300);
 	}
 
 	return {

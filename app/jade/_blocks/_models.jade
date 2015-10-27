@@ -3,12 +3,12 @@
 
 mixin model()
 	.model.model_view-icons(data-rating="4")
-		.model__slider КАРТИНКИ
+		.model__slider слайдер
 		h4.model__title Samsung GT-I9301I GALAXY S 3
 		ul.model__description
 			each val in description
 				li.model__description-item.clearfix #{val}
-					span.right Текст
+					span.right ...
 		.rating-wrapper
 			ul.rating
 				li.rating__star-filled
@@ -17,6 +17,9 @@ mixin model()
 				li.rating__star-filled
 				li.rating__star-unfilled
 			span.rating__count 4
+
+		.model__price 8 990
+			span.rouble &#8381;
 
 		.available-btn-wrapper.clearfix
 			.available-mark.available-mark_true В наличии

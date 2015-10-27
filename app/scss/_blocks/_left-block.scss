@@ -13,3 +13,34 @@
 .model-type {list-style-type: none; @include nomargin(0); border: 1px solid #dee1e4; margin-bottom: 35px; border-radius: 7px; background: white; overflow: hidden;}
 .model-type__link {padding: 15px 15px 15px 30px; display: block; text-decoration: none; color: #333; transition: .3s; border-bottom: 1px solid #dee1e4;}
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {background: #d9e5ea; transition: .3s;}
+
+.available__radio,
+.color__filter-input,
+.brands__filter-input,
+.color__filter-input,
+.os__filter-input {position: absolute; left: -9999px;}
+
+.available__label {display: block; line-height: 3em;}
+.available__label:before {
+	display: inline-block;
+	content: " ";
+	width: 19px;
+	height: 19px;
+	background-image: url(../../img/sprite-layout.png);
+  	background-position: -89px -89px;
+  	margin-top: 5px;
+  	margin-bottom: -5px;
+  	margin-right: 10px;
+}
+
+.available__label_active:before {
+	display: inline-block;
+	content: " ";
+	width: 19px;
+	height: 19px;
+	background-image: url(../../img/sprite-layout.png);
+  	background-position: 0px -89px;
+  	margin-top: 5px;
+  	margin-bottom: -5px;
+  	margin-right: 10px;
+}

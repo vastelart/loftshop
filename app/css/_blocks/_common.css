@@ -3,7 +3,7 @@ html {
   min-height: 100%; }
 
 body {
-  margin: 0 0 220px;
+  margin: 0 0 260px;
   /* bottom = footer height */ }
 
 body {
@@ -65,3 +65,6 @@ body {
 
 .clearfix:after {
   clear: both; }
+
+.content__info {
+  margin-bottom: 60px; }
