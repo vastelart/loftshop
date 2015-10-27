@@ -1,7 +1,8 @@
 ### Loftschool DZ2 — loftshop
 -
 1. git clone https://github.com/vastelart/loftshop.git
-2. bower install
-3. npm install
-4. gulp serve
-5. gulp watch
+2. cd !$
+3. bower install
+4. npm install
+5. gulp serve
+6. gulp watch
