@@ -38,7 +38,6 @@
   background: #d9e5ea;
   transition: .3s; }
 
-<<<<<<< HEAD
 .available__radio,
 .color__filter-input,
 .brands__filter-input,
@@ -72,8 +71,3 @@
   margin-top: 5px;
   margin-bottom: -5px;
   margin-right: 10px; }
-=======
-.available__label,
-.available__radio {
-  display: inline-block; }
->>>>>>> e072a96c008814aeb717ba821dccee0460b57ce3
