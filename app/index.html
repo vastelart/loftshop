@@ -81,11 +81,11 @@
 					<div class="available">
 						<h3 class="available__heading content-heading">Наличие в магазинах1<span class="heading-arrow"></span></h3>
 						<fieldset class="available__filter cooltech-accordeon">
-							<label for="allShop" class="available__label">Во всех магазинах
-								<input type="radio" name="available" value="all" id="allShop" class="available__radio">
+							<label class="available__label">Во всех магазинах
+								<input type="radio" class="available__radio">
 							</label>
-							<label for="nearShop" class="available__label">В ближайшем ко мне магазине
-								<input type="radio" name="available" value="near" id="nearShop" class="available__radio">
+							<label class="available__label">В ближайшем ко мне магазине
+								<input type="radio" class="available__radio">
 							</label>
 						</fieldset>
 					</div>
@@ -160,16 +160,16 @@
 			</div>
 			<div class="right-block right">
 				<!--Сортировка и отображение-->
-				<div class="filter">
-					<form class="filter__sort">
+				<div class="filter clearfix">
+					<fieldset class="filter__sort">
 						<label for="sortFormSelect" class="sort-form__label">Сортировать по
 							<select id="sortFormSelect" class="sort-form__select">
 								<option>По цене</option>
 							</select>
 						</label>
-					</form>
+					</fieldset>
 					<!--Вид каталога-->
-					<div class="filter__view">Вид каталога<a href="#" class="filter__view-item active">1</a><a href="#" class="filter__view-item">2</a><a href="#" class="filter__view-item">3</a></div>
+					<div class="filter__view right">Вид каталога<a href="#" class="filter__view-item filter__view-item_active">1</a><a href="#" class="filter__view-item">2</a><a href="#" class="filter__view-item">3</a></div>
 				</div>
 				<!--Модели телефонов-->
 								<div data-rating="4" class="model"></div>

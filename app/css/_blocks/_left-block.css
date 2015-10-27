@@ -34,3 +34,7 @@
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {
   background: #d9e5ea;
   transition: .3s; }
+
+.available__label,
+.available__radio {
+  display: inline-block; }

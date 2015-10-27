@@ -223,6 +223,14 @@ body {
   background: #d9e5ea;
   transition: .3s; }
 
+.available__label,
+.available__radio {
+  display: inline-block; }
+
+.filter__sort,
+.filter__view {
+  display: inline-block; }
+
 .model {
   max-width: 500px;
   border: 1px solid #ccc;

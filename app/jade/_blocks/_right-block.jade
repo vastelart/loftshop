@@ -1,14 +1,14 @@
 .right-block.right
 	//Сортировка и отображение
-	.filter
-		form.filter__sort
+	.filter.clearfix
+		fieldset.filter__sort
 			label.sort-form__label(for="sortFormSelect") Сортировать по
 				select.sort-form__select(id="sortFormSelect")
 					option По цене
 
 		//Вид каталога
-		.filter__view Вид каталога
-			a.filter__view-item.active(href="#") 1
+		.filter__view.right Вид каталога
+			a.filter__view-item.filter__view-item_active(href="#") 1
 			a.filter__view-item(href="#") 2
 			a.filter__view-item(href="#") 3
 
