@@ -14,6 +14,7 @@
 .model-type__link {padding: 15px 15px 15px 30px; display: block; text-decoration: none; color: #333; transition: .3s; border-bottom: 1px solid #dee1e4;}
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {background: #d9e5ea; transition: .3s;}
 
+<<<<<<< HEAD
 .available__radio,
 .color__filter-input,
 .brands__filter-input,
@@ -44,3 +45,7 @@
   	margin-bottom: -5px;
   	margin-right: 10px;
 }
+=======
+.available__label,
+.available__radio {display: inline-block;}
+>>>>>>> e072a96c008814aeb717ba821dccee0460b57ce3

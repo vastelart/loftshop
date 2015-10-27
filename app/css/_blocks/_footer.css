@@ -1,7 +1,7 @@
 /*
 Error: Undefined mixin 'nomargin'.
-        on line 18 of e:\web\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'
-        from line 18 of e:\web\loftshop\app\scss\_blocks\_footer.scss
+        on line 18 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'
+        from line 18 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss
 
 13: .footer-navigation__item {display: inline-block; margin-right: 25px;}
 14: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}
@@ -16,8 +16,8 @@ Error: Undefined mixin 'nomargin'.
 23: .copyright {font-size: 13px; line-height: 3em; color: white;}
 
 Backtrace:
-e:\web\loftshop\app\scss\_blocks\_footer.scss:18:in `nomargin'
-e:\web\loftshop\app\scss\_blocks\_footer.scss:18
+c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss:18:in `nomargin'
+c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss:18
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:98:in `block in with_mixin'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
@@ -66,4 +66,8 @@ c:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
+<<<<<<< HEAD
   content: "Error: Undefined mixin 'nomargin'.\A         on line 18 of e:\web\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'\A         from line 18 of e:\web\loftshop\app\scss\_blocks\_footer.scss\A \A 13: .footer-navigation__item {display: inline-block; margin-right: 25px;}\A 14: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}\A 15: .footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}\A 16: \A 17: .footer-cocials-wrapper {padding: 35px 0;}\A 18: .footer-socials {@include nomargin(0);}\A 19: .footer-socials__item {display: inline-block; margin-left: 25px;}\A 20: .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}\A 21: \A 22: .copyright-wrapper {border-top: 1px solid #666;}\A 23: .copyright {font-size: 13px; line-height: 3em; color: white;}"; }
+=======
+  content: "Error: Undefined mixin 'nomargin'.\A         on line 18 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'\A         from line 18 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss\A \A 13: .footer-navigation__item {display: inline-block; margin-right: 25px;}\A 14: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}\A 15: .footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}\A 16: \A 17: .footer-cocials-wrapper {padding: 35px 0;}\A 18: .footer-socials {@include nomargin(0);}\A 19: .footer-socials__item {display: inline-block; margin-left: 25px;}\A 20: .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}\A 21: \A 22: .copyright-wrapper {border-top: 1px solid #666;}\A 23: .copyright {font-size: 13px; line-height: 2em; color: white;}"; }
+>>>>>>> e072a96c008814aeb717ba821dccee0460b57ce3

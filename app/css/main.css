@@ -311,6 +311,7 @@ body {
   background: #d9e5ea;
   transition: .3s; }
 
+<<<<<<< HEAD
 .available__radio,
 .color__filter-input,
 .brands__filter-input,
@@ -375,6 +376,15 @@ body {
   border-left: 1px solid #dee1e4;
   margin: 0;
   padding: 0; }
+=======
+.available__label,
+.available__radio {
+  display: inline-block; }
+
+.filter__sort,
+.filter__view {
+  display: inline-block; }
+>>>>>>> e072a96c008814aeb717ba821dccee0460b57ce3
 
 .model {
   max-width: 500px;
