@@ -1,8 +1,8 @@
 @import "../_includes/_vars_mixins";
 
-.right-block {width: 743px; overflow: hidden;}
+.right-block {width: 743px;}
 
-.filter {background: #e4ebee; @include bordermix(1px solid #dee1e4); border-radius: 7px;}
+.filter {background: #e4ebee; @include bordermix(1px solid #dee1e4); border-radius: 7px; margin-bottom: 20px;}
 
 .filter__sort {border: 0;}
 

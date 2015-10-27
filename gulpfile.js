@@ -33,8 +33,7 @@ gulp.task('scss', function() {
 	gulp.src(paths.scss)
 	.pipe(plumber())
 	.pipe(scss({'bundleExec': false}))
-	.pipe(gulp.dest('app/css'))
-	.pipe(livereload());
+	.pipe(gulp.dest('app/css'));
 });
 
 gulp.task('jade', function() {
@@ -43,8 +42,7 @@ gulp.task('jade', function() {
 	.pipe(jade({
 		pretty: '\t'
 	}))
-	.pipe(gulp.dest('app/'))
-	.pipe(livereload());
+	.pipe(gulp.dest('app/'));
 });
 
 gulp.task('compass', function() {
@@ -65,9 +63,9 @@ gulp.task('watch', function(){
 });
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('app/img/layout/*.png').pipe(spritesmith({
-    imgName: 'img/sprite-layout.png',
-    cssName: 'sprite-layout.css',
+  var spriteData = gulp.src('app/img/rating/*.png').pipe(spritesmith({
+    imgName: 'img/sprite-rating.png',
+    cssName: 'sprite-rating.css',
     padding: 70
   }));
   return spriteData.pipe(gulp.dest('sprite'));

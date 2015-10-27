@@ -1,11 +1,11 @@
 .right-block {
-  width: 743px;
-  overflow: hidden; }
+  width: 743px; }
 
 .filter {
   background: #e4ebee;
   border: 1px solid #dee1e4;
-  border-radius: 7px; }
+  border-radius: 7px;
+  margin-bottom: 20px; }
 
 .filter__sort {
   border: 0; }

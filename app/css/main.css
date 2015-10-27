@@ -271,13 +271,13 @@ body {
   transition: .3s; }
 
 .right-block {
-  width: 743px;
-  overflow: hidden; }
+  width: 743px; }
 
 .filter {
   background: #e4ebee;
   border: 1px solid #dee1e4;
-  border-radius: 7px; }
+  border-radius: 7px;
+  margin-bottom: 20px; }
 
 .filter__sort {
   border: 0; }
@@ -300,7 +300,18 @@ body {
   border: 1px solid #ccc;
   margin: 0;
   padding: 0;
-  display: inline-block; }
+  display: inline-block;
+  padding: 15px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: white; }
+
+.model:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s; }
+
+.model__title {
+  font-size: 14px; }
 
 .model__description {
   margin: 0;
@@ -309,6 +320,65 @@ body {
 
 .model__description-item:nth-child(odd) {
   background: #e6e6e6; }
+
+.rating-wrapper {
+  width: 145px;
+  padding: 10px 0;
+  margin: 0 auto; }
+
+.rating {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: 15px; }
+
+.rating__star-filled, .rating__star-unfilled {
+  display: inline-block;
+  width: 17px;
+  height: 20px; }
+
+.rating__star-filled {
+  background-image: url(../../img/sprite-rating.png);
+  background-position: -91px 0px;
+  background-repeat: no-repeat; }
+
+.rating__star-unfilled {
+  background-image: url(../../img/sprite-rating.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat; }
+
+.rating__count {
+  display: inline-block;
+  background: #b5beca;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  padding: 0 10px;
+  border-radius: 5px;
+  vertical-align: top;
+  margin-top: 2px; }
+
+.available-mark {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  display: inline-block; }
+
+.available-mark_true:before {
+  display: block; }
+
+.btn-bucket {
+  padding: 8px 15px;
+  background: #ff6e35;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: 0;
+  display: inline-block; }
+
+.btn-bucket:focus, .btn-bucket:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
 
 .footer {
   background: url("../../img/footer_lodyas.png");
@@ -322,7 +392,7 @@ body {
   padding: 72px 0; }
 
 .footer-navigation {
-  width: 600px;
+  width: 550px;
   line-height: 2.5em;
   text-align: right;
   margin-right: -25px;

@@ -2,12 +2,25 @@
 - var count = 0;
 
 mixin model()
-	.model(data-rating="4")
-	.model__slider КАРТИНКИ
-	h4.model__title Samsung GT-I9301I GALAXY S 3
-	ul.model__description
-		each val in description
-			li.model__description-item.clearfix #{val}
-				span.right Текст
+	.model.model_view-icons(data-rating="4")
+		.model__slider КАРТИНКИ
+		h4.model__title Samsung GT-I9301I GALAXY S 3
+		ul.model__description
+			each val in description
+				li.model__description-item.clearfix #{val}
+					span.right Текст
+		.rating-wrapper
+			ul.rating
+				li.rating__star-filled
+				li.rating__star-filled
+				li.rating__star-filled
+				li.rating__star-filled
+				li.rating__star-unfilled
+			span.rating__count 4
+
+		.available-btn-wrapper.clearfix
+			.available-mark.available-mark_true В наличии
+
+			button.btn.btn-bucket.right В корзину
 
 +model()
