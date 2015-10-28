@@ -118,14 +118,20 @@
 						<div class="price">
 							<h3 class="price__heading content-heading">Цена<span class="heading-arrow"></span></h3>
 							<fieldset class="price__filter cooltech-accordeon">
-								<label class="price__filter-label">от
-									<input type="text" name="from" value="0" class="price__filter-input">
-								</label>
-								<label>до
-									<input type="text" name="to" value="13000" class="price__filter-input">
-								</label>
+								<div class="clearfix">
+									<div class="left">
+										<label class="price__filter-label">от
+											<input type="text" name="from" value="1" class="price__filter-input">
+										</label>
+									</div>
+									<div class="right">
+										<label>до
+											<input type="text" name="to" value="13000" class="price__filter-input">
+										</label>
+									</div>
+								</div>
+								<div id="sliderRange"></div>
 							</fieldset>
-							<div id="sliderRange"></div>
 						</div>
 						<!--Цвет-->
 						<div class="color">

@@ -2,8 +2,11 @@
 	h3.price__heading.content-heading Цена
 		span.heading-arrow
 	fieldset.price__filter.cooltech-accordeon
-		label.price__filter-label от
-			input.price__filter-input(type="text", name="from", value="0")
-		label до
-			input.price__filter-input(type="text", name="to", value="13000")
-	div(id="sliderRange")
+		.clearfix
+			.left
+				label.price__filter-label от
+					input.price__filter-input(type="text", name="from", value="1")
+			.right
+				label до
+					input.price__filter-input(type="text", name="to", value="13000")
+		div(id="sliderRange")
