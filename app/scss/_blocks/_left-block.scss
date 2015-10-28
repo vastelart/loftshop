@@ -1,6 +1,6 @@
 @import "../_includes/_vars_mixins";
 
-.left-block {width: 333px;}
+.left-block {width: 332px;}
 
 .left-filter-wrapper {background: white; @include bordermix(1px solid #dee1e4); @include borderRadiusMix(7px);}
 
@@ -20,7 +20,35 @@
 .color__filter-input,
 .os__filter-input {position: absolute; left: -9999px;}
 
-.available__label {display: block; line-height: 3em;}
+.filter-reset {color: #5db2fc;}
+.filter-reset:hover, .filter-reset:active, .filter-reset:focus {color: $orange;}
+
+.available__label, .os__filter-label, .brands__filter-label {display: block; line-height: 3em; cursor: pointer;}
+
+.os__filter-label:before, .brands__filter-label:before {
+	display: inline-block;
+	content: " ";
+	background-image: url(../../img/sprite-layout.png);
+  	background-position: -89px 0px;
+  	width: 19px;
+  	height: 19px;
+  	margin-top: 5px;
+  	margin-bottom: -5px;
+  	margin-right: 10px;
+}
+
+.os__filter-label_active:before, .brands__filter-label_active:before {
+	display: inline-block;
+	content: " ";
+	background-image: url(../../img/sprite-layout.png);
+  	background-position: 0px 0px;
+  	width: 19px;
+  	height: 19px;
+  	margin-top: 5px;
+  	margin-bottom: -5px;
+  	margin-right: 10px;
+}
+
 .available__label:before {
 	display: inline-block;
 	content: " ";

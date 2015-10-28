@@ -22,7 +22,16 @@ header.header
 				button(type="submit", name="submit", class="search-form__submit") Найти
 
 		//Extras
-		+listSet('extras right', 'extras__item', 'extras__link', extras)
+		//+listSet('extras right', 'extras__item', 'extras__link', extras)
+		ul.extras.right
+			li.extras__item
+				a(href="#", id="showYaMap").extras__link Карта проезда
+			li.extras__item
+				a(href="#").extras__link История заказов
+			li.extras__item
+				a(href="#").extras__link Корзина
+
+		div.ya-map-block(id="yaMap")
 
 	.navigation-wrapper
 		.container

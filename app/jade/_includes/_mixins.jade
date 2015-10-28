@@ -34,4 +34,4 @@ mixin listSet(blockClass, element, linkClass, linkText)
 mixin fieldsetMix(vals, inputClass, labelClass, inputType)
 	each val, index in vals
 		label(class="#{labelClass}") #{val}
-			input(type="#{inputType}", value="", class="#{inputClass}")
+			input(type="#{inputType}", value="#{val}", class="#{inputClass}")

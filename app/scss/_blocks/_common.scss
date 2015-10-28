@@ -10,9 +10,11 @@ body {
 
 body {font-family: $ffamily; background: #f4f4f4; font-size: 16px;}
 
+.main-wrapper {min-width: 1100px; overflow: hidden;}
+
 .cooltech-accordeon {border: 0; @include nomargin(0); padding: 10px 0;}
 
-.container {width: 1140px; margin: 0 auto; padding: 0 20px;}
+.container {width: 1100px; margin: 0 auto; padding: 0 5px; box-sizing: border-box;}
 
 .content-heading {font-size: 16px; font-weight: 600; @include nomargin(0); cursor: pointer; position: relative;}
 .heading-arrow {

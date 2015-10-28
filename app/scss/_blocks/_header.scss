@@ -52,7 +52,7 @@
 
 
 
-.address {margin-right: 80px; position: relative;}
+.address {margin-right: 80px; position: relative; cursor: pointer;}
 .address:before {
 	display: block;
 	position: absolute;
@@ -87,9 +87,9 @@
 .logo-wrapper, .search-form-wrapper {margin-right: 50px;}
 
 .extras {line-height: 2em;}
-.extras__item {margin-right: 30px;}
-.extras__item:last-child {margin-right: 0;}
-.extras__link {color: #333; text-decoration: none; border-bottom: 1px solid rgba(50,50,50,.5); transition: $transition;}
+.extras__item {margin-left: 25px;}
+.extras__item:first-child {margin-left: 0;}
+.extras__link {color: #333; text-decoration: none; border-bottom: 1px solid rgba(50,50,50,.5); transition: $transition; font-weight: 600;}
 .extras__link:hover, .extras__link:active, .extras__link:focus {color: $orange; text-decoration: none; border-bottom: 1px solid transparentize($orange, .5); transition: $transition;}
 
 .search-form-wrapper,.extras {vertical-align: top;}
@@ -97,8 +97,11 @@
 .search-form__input {width: 290px; font-size: 14px; font-weight: light; padding-left: 15px; color: #b2b2b2;  @include bordermix(1px solid #dee1e4);}
 .search-form__submit {width: 75px; @include nomargin(0); margin-left: -5px; color: white; background: $orange; border: 0; font-weight: 600;}
 
+.ya-map-block {height: 300px; padding: 10px 0; display: none;}
+
 .navigation-wrapper {background: white;}
-.navigation__link {padding: 15px; display: inline-block; color: #333; text-decoration: none; transition: .3s;}
+.navigation {padding: 0 10px;}
+.navigation__link {padding: 15px 10px; display: inline-block; color: #333; text-decoration: none; transition: .3s;}
 .navigation__link:hover {background: #e4e2e2; text-decoration: none; transition: .3s;}
 .navigation__link:active, .navigation__link:focus {background: $orange; color: white; text-decoration: none; transition: .3s;}
 
@@ -107,3 +110,5 @@
 .bcrumbs__link {position: relative;}
 .bcrumbs__link {color: #333; text-decoration: none; transition: $transition;}
 .bcrumbs__link:hover, .bcrumbs__link:active, .bcrumbs__link:focus {color: $orange; text-decoration: none; transition: $transition;}
+
+.page-heading {font-size: 20px;}

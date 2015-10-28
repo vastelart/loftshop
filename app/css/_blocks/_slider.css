@@ -1,21 +1,17 @@
 /*
-Error: Undefined variable: "$transition".
-        on line 6 of e:\web\loftshop\app\scss\_blocks\_models.scss
+Error: Undefined variable: "$orange".
+        on line 49 of e:\web\loftshop\app\scss\_blocks\_slider.scss
 
-1: @mixin nomargin($marg) {
-2: 	margin: $marg;
-3: 	padding: $marg;
-4: }
-5: 
-6: .model {width: 235px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box;}
-7: .model:hover {box-shadow: 0 0 10px rgba(black, .3); transition: $transition;}
-8: .model__title {font-size: 14px;}
-9: .model__description {@include nomargin(0); list-style-type: none; font-size: 14px; margin-bottom: 10px;}
-10: .model__description-item:nth-child(odd) {background: #e6e6e6;}
-11: 
+44: .ui-slider {height: 3px;}
+45: .ui-slider.ui-slider-horizontal {
+46: 	background: #dee1e4;
+47: }
+48: .ui-slider-range {
+49: 	background: $orange;
+50: }
 
 Backtrace:
-e:\web\loftshop\app\scss\_blocks\_models.scss:6
+e:\web\loftshop\app\scss\_blocks\_slider.scss:49
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -62,4 +58,4 @@ c:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$transition\".\A         on line 6 of e:\web\loftshop\app\scss\_blocks\_models.scss\A \A 1: @mixin nomargin($marg) {\A 2: 	margin: $marg;\A 3: 	padding: $marg;\A 4: }\A 5: \A 6: .model {width: 235px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box;}\A 7: .model:hover {box-shadow: 0 0 10px rgba(black, .3); transition: $transition;}\A 8: .model__title {font-size: 14px;}\A 9: .model__description {@include nomargin(0); list-style-type: none; font-size: 14px; margin-bottom: 10px;}\A 10: .model__description-item:nth-child(odd) {background: #e6e6e6;}\A 11: "; }
+  content: "Error: Undefined variable: \"$orange\".\A         on line 49 of e:\web\loftshop\app\scss\_blocks\_slider.scss\A \A 44: .ui-slider {height: 3px;}\A 45: .ui-slider.ui-slider-horizontal {\A 46: 	background: #dee1e4;\A 47: }\A 48: .ui-slider-range {\A 49: 	background: $orange;\A 50: }"; }

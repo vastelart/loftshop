@@ -3,13 +3,13 @@
 	padding: $marg;
 }
 
-.model {width: 235px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white;}
+.model {width: 235px; border: 1px solid #ccc; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box;}
 .model:hover {box-shadow: 0 0 10px rgba(black, .3); transition: $transition;}
 .model__title {font-size: 14px;}
-.model__description {@include nomargin(0); list-style-type: none;}
+.model__description {@include nomargin(0); list-style-type: none; font-size: 14px; margin-bottom: 10px;}
 .model__description-item:nth-child(odd) {background: #e6e6e6;}
 
-.rating-wrapper {width: 145px; padding: 10px 0; margin: 0 auto;}
+.rating-wrapper {width: 145px; margin: 0 auto;}
 .rating {display: inline-block; @include nomargin(0); margin-right: 15px;}
 .rating__star-filled, .rating__star-unfilled {display: inline-block; width: 17px; height: 20px;}
 .rating__star-filled {
@@ -24,7 +24,7 @@
 }
 .rating__count {display: inline-block; background: #b5beca; color: white; font-size: 12px; text-align: center; padding: 0 10px; border-radius: 7px; vertical-align: top; margin-top: 2px; height: 15px;}
 
-.model__price {text-align: center; font-weight: 600; margin-bottom: 15px; font-size: 20px;}
+.model__price {text-align: center; font-weight: 600; margin-bottom: 5px; font-size: 20px;}
 .rouble {font-weight: normal; font-size: 18px; margin-left: 5px;}
 
 .available-mark {font-size: 12px; font-weight: bold; color: #333; display: inline-block; line-height: 3em;}

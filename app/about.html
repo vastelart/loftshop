@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>COOLTECH</title>
-		<meta name="viewport" content="width=1140, initial-scale=1.0">
+		<meta name="viewport" content="width=1100, initial-scale=1.0">
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic" rel="stylesheet" type="text/css">
@@ -10,82 +11,86 @@
 		<script src="bower/modernizr/modernizr.js"></script>
 	</head>
 	<body>
-		<header class="header">
-			<div class="top-block-wrapper">
-				<div class="container clearfix">
-					<!--Соцсети-->
-					<ul class="socials left">
-						<li class="socials__item"><a href="http://facebook.com/cooltech" class="socials__link socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
-						<li class="socials__item"><a href="http://vk.com/cooltech" class="socials__link socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
-						<li class="socials__item"><a href="http://twitter.com/cooltech" class="socials__link socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
-					</ul>
-					<div class="contacts right">
-						<div class="address">ул. Маяковская 6, офис 17</div>
-						<div class="phone">+7 (921) 123-12-13</div>
+		<div class="main-wrapper">
+			<header class="header">
+				<div class="top-block-wrapper">
+					<div class="container clearfix">
+						<!--Соцсети-->
+						<ul class="socials left">
+							<li class="socials__item"><a href="http://facebook.com/cooltech" class="socials__link socials__link_fb"><span class="text-hide">facebook.com/cooltech</span></a></li>
+							<li class="socials__item"><a href="http://vk.com/cooltech" class="socials__link socials__link_vk"><span class="text-hide">vk.com/cooltech</span></a></li>
+							<li class="socials__item"><a href="http://twitter.com/cooltech" class="socials__link socials__link_tw"><span class="text-hide">twitter.com/cooltech</span></a></li>
+						</ul>
+						<div class="contacts right">
+							<div class="address">ул. Маяковская 6, офис 17</div>
+							<div class="phone">+7 (921) 123-12-13</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="logo-search-extras-wrapper container">
-				<!--Логотип-->
-				<div class="logo-wrapper">
-					<div class="logo"><img src="../../img/cooltech.png" alt="COOLTECH"></div>
-				</div>
-				<!--Поиск-->
-				<div class="search-form-wrapper">
-					<form id="searchForm" action="/" class="search-form">
-						<input type="text" name="search" placeholder="Что будем искать" class="search-form__input">
-						<button type="submit" name="submit" class="search-form__submit">Найти</button>
-					</form>
-				</div>
-				<!--Extras-->
-				<ul class="extras right">
-					<li class="extras__item"><a href="#" class="extras__link">Карта проезда</a></li>
-					<li class="extras__item"><a href="#" class="extras__link">История заказов</a></li>
-					<li class="extras__item"><a href="#" class="extras__link">Корзина</a></li>
-				</ul>
-			</div>
-			<div class="navigation-wrapper">
-				<div class="container">
-					<!--Основная навигация по магазину-->
-					<ul class="navigation">
-						<li class="navigation__item"><a href="#" class="navigation__link">Планшеты</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Мобильные телефоны</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">MP3-плееры</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Персональные компьютеры</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Ноутбуки</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Аксессуары</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Бытовая техника</a></li>
+				<div class="logo-search-extras-wrapper container">
+					<!--Логотип-->
+					<div class="logo-wrapper">
+						<div class="logo"><img src="../../img/cooltech.png" alt="COOLTECH"></div>
+					</div>
+					<!--Поиск-->
+					<div class="search-form-wrapper">
+						<form id="searchForm" action="/" class="search-form">
+							<input type="text" name="search" placeholder="Что будем искать" class="search-form__input">
+							<button type="submit" name="submit" class="search-form__submit">Найти</button>
+						</form>
+					</div>
+					<!--Extras-->
+					<!--+listSet('extras right', 'extras__item', 'extras__link', extras)-->
+					<ul class="extras right">
+						<li class="extras__item"><a href="#" id="showYaMap" class="extras__link">Карта проезда</a></li>
+						<li class="extras__item"><a href="#" class="extras__link">История заказов</a></li>
+						<li class="extras__item"><a href="#" class="extras__link">Корзина</a></li>
 					</ul>
+					<div id="yaMap" class="ya-map-block"></div>
 				</div>
+				<div class="navigation-wrapper">
+					<div class="container">
+						<!--Основная навигация по магазину-->
+						<ul class="navigation">
+							<li class="navigation__item"><a href="#" class="navigation__link">Планшеты</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Мобильные телефоны</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">MP3-плееры</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Персональные компьютеры</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Ноутбуки</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Аксессуары</a></li>
+							<li class="navigation__item"><a href="#" class="navigation__link">Бытовая техника</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container">
+					<!--Breadcrumbs-->
+					<ul class="bcrumbs">
+						<li class="bcrumbs__item"><a href="#" class="bcrumbs__link">Главная</a></li>
+						<li class="bcrumbs__item"><a href="#" class="bcrumbs__link">Каталог</a></li>
+					</ul>
+					<!--Заголовок страницы-->
+					<h2 class="page-heading">Мобильные телефоны</h2>
+				</div>
+			</header>
+			<!--Основной контент-->
+			<div class="content container clearfix">
+				<p>SMELLS</p>
 			</div>
 			<div class="container">
-				<!--Breadcrumbs-->
-				<ul class="bcrumbs">
-					<li class="bcrumbs__item"><a href="#" class="bcrumbs__link">Главная</a></li>
-					<li class="bcrumbs__item"><a href="#" class="bcrumbs__link">Каталог</a></li>
-				</ul>
-				<!--Заголовок страницы-->
-				<h2 class="page-heading">Мобильные телефоны</h2>
-			</div>
-		</header>
-		<!--Основной контент-->
-		<div class="content container clearfix">
-			<p>SMELLS</p>
-		</div>
-		<div class="container">
-			<div class="content__info">
-				<h2>Важная информация</h2>
-				<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-				<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-				<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+				<div class="content__info">
+					<h2>Важная информация</h2>
+					<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+				</div>
 			</div>
 		</div>
 		<!--Футер-->
 		<footer class="footer">
-			<div class="container">
+			<div class="container clearfix">
 				<div class="clearfix">
 					<div class="left">
 						<div class="footer-logo-wrapper"><img src="/img/cooltech-footer.png" class="footer-logo"></div>
@@ -119,5 +124,8 @@
 		<script src="/bower/jquery/jquery.min.js" defer></script>
 		<!--Scripts-->
 		<script src="/js/phones.js" defer></script>
+		<script src="/js/main.js" defer></script>
+		<script src="/js/filter.js" defer></script>
+		<!--script(type="text/javascript", charset="utf-8", src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=luS6QIGUJZZ4XSS7w7euv8ibnFEsgiBf&width=100%&height=100%&lang=ru_RU&sourceType=constructor&id=yaMap")-->
 	</body>
 </html>
