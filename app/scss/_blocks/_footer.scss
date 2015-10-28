@@ -21,6 +21,39 @@
 .footer-socials__item {display: inline-block; margin-left: 25px;}
 .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}
 
+.footer-socials__link_fb {
+	background-image: url(../../img/sprite-socials.png);
+  	background-position: -174px -80px;
+  	background-repeat: no-repeat;
+}
+.footer-socials__link_fb:hover {
+	background-image: url(../../img/sprite-socials.png);
+  	background-position: -174px 11px;
+  	background-repeat: no-repeat;
+}
+
+.footer-socials__link_tw {
+	background-image: url(../../img/sprite-socials.png);
+  	background-position: -86px 11px;
+  	background-repeat: no-repeat;
+}
+.footer-socials__link_tw:hover {
+	background-image: url(../../img/sprite-socials.png);
+  	background-position: 9px 11px;
+  	background-repeat: no-repeat;
+}
+
+.footer-socials__link_vk {
+	background-image: url(../../img/sprite-socials.png);
+  	background-position: -72px -80px;
+  	background-repeat: no-repeat;
+}
+.footer-socials__link_vk:hover {
+	background-image: url(../../img/sprite-socials.png);
+  background-position: 14px -80px;
+  	background-repeat: no-repeat;
+}
+
 .copyright-wrapper {border-top: 1px solid #666;}
 .copyright {font-size: 13px; line-height: 3em; color: white;}
 
