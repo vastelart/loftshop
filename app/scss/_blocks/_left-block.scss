@@ -1,6 +1,9 @@
 @import "../_includes/_vars_mixins";
 
-.left-block {width: 332px;}
+//$colors: ('#fff', '#cccccc', '#000', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d');
+//$classes: white, grey, black, deep-blue, red, yellow, orange, green, blue, purple, pink, brown;
+
+.left-block {width: 332px; margin-bottom: 60px;}
 
 .left-filter-wrapper {background: white; @include bordermix(1px solid #dee1e4); @include borderRadiusMix(7px);}
 
@@ -71,4 +74,24 @@
   	margin-top: 5px;
   	margin-bottom: -5px;
   	margin-right: 10px;
+}
+
+.color {
+  padding-bottom: 0;
+}
+.color__filter-label {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #ccc;
+  margin: 0 22px 22px 0;
+  cursor: pointer;
+  //transition: $transition;
+}
+
+.color__filter-label:hover {
+  //transition: $transition;
+  border: 2px solid $orange;
+  width: 35px;
+  height: 35px;
 }

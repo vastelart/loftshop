@@ -1,3 +1,5 @@
+- var views = ['table', 'icons', 'list']
+
 .right-block.right
 	//Сортировка и отображение
 	.filter.clearfix
@@ -10,14 +12,9 @@
 		//Вид каталога
 		ul.filter__view.right
 			li.filter__view-item
-				a.filter__view-link.filter__view-link_active(href="#", data-view="table")
-					span.text-hide 1
-			li.filter__view-item
-				a.filter__view-link(href="#", data-view="icons")
-					span.text-hide 2
-			li.filter__view-item
-				a.filter__view-link(href="#", data-view="list")
-					span.text-hide 3
+				each view in views
+					a(href="#", class="filter__view-link filter__view-link_#{view}", data-view="#{view}")
+						span.text-hide 1
 		span.right Вид каталога
 
 	//Модели телефонов

@@ -100,3 +100,19 @@
   margin-top: 5px;
   margin-bottom: -5px;
   margin-right: 10px; }
+
+.color {
+  padding-bottom: 0; }
+
+.color__filter-label {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #ccc;
+  margin: 0 22px 22px 0;
+  cursor: pointer; }
+
+.color__filter-label:hover {
+  border: 2px solid #ff6e35;
+  width: 35px;
+  height: 35px; }

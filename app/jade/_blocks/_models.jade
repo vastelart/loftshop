@@ -1,29 +1,50 @@
 - var description = ['Тип SIM-карты', 'Количество SIM-карт', 'Цвет', 'OS', 'Связь 3G', '4G(LTE)', 'GPS-модуль']
+- var models = [{modelTitle: 'Samsung GT-I9301I GALAXY S 3', simType: 'Micro-SIM', simCount: '1', color: 'Белый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '11290', available: 'В наличии'}, {modelTitle: 'Microsoft Lumia 640 RM-1077', simType: 'Micro-SIM', simCount: '2', color: 'Белый', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '10990', available: 'В наличии'}]
 - var count = 0;
 
 mixin model()
-	.model.model_view-icons(data-rating="4")
-		.model__slider слайдер
-		h4.model__title Samsung GT-I9301I GALAXY S 3
-		ul.model__description
-			each val in description
-				li.model__description-item.clearfix #{val}
-					span.right ...
-		.rating-wrapper
-			ul.rating
-				li.rating__star-filled
-				li.rating__star-filled
-				li.rating__star-filled
-				li.rating__star-filled
-				li.rating__star-unfilled
-			span.rating__count 4
+	each model, index in models
+		.model.model_view-icons(data-rating="4")
+			.first-image
+				img.model__slider-img.model__slider-img_full(src="img/slider/1.jpg")
+			ul.model__slider
+				li.model__slider-item
+					img.model__slider-img(src="img/slider/1.jpg")
+				li.model__slider-item
+					img.model__slider-img(src="img/slider/2.jpg")
+				li.model__slider-item
+					img.model__slider-img(src="img/slider/3.jpg")
+			h4.model__title= model.modelTitle
+			ul.model__description
+				li.model__description-item.clearfix Тип SIM-карты
+						span.right= model.simType
+				li.model__description-item.clearfix Количество SIM-карт
+						span.right= model.simCount
+				li.model__description-item.clearfix Цвет
+						span.right= model.color
+				li.model__description-item.clearfix OS
+						span.right= model.os
+				li.model__description-item.clearfix Связь 3G
+						span.right= model.threeG
+				li.model__description-item.clearfix 4G(LTE)
+						span.right= model.fourG
+				li.model__description-item.clearfix GPS-модуль
+						span.right= model.GPS
+			.rating-wrapper
+				ul.rating
+					li.rating__star-filled
+					li.rating__star-filled
+					li.rating__star-filled
+					li.rating__star-filled
+					li.rating__star-unfilled
+				span.rating__count 4
 
-		.model__price 8 990
-			span.rouble &#8381;
+			.model__price= model.modelPrice
+				span.rouble &#8381;
 
-		.available-btn-wrapper.clearfix
-			.available-mark.available-mark_true В наличии
+			.available-btn-wrapper.clearfix
+				.available-mark.available-mark_true= model.available
 
-			button.btn.btn-bucket.right В корзину
+				button.btn.btn-bucket.right В корзину
 
 +model()

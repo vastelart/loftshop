@@ -290,7 +290,8 @@ body {
   font-size: 20px; }
 
 .left-block {
-  width: 332px; }
+  width: 332px;
+  margin-bottom: 60px; }
 
 .left-filter-wrapper {
   background: white;
@@ -391,6 +392,22 @@ body {
   margin-top: 5px;
   margin-bottom: -5px;
   margin-right: 10px; }
+
+.color {
+  padding-bottom: 0; }
+
+.color__filter-label {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #ccc;
+  margin: 0 22px 22px 0;
+  cursor: pointer; }
+
+.color__filter-label:hover {
+  border: 2px solid #ff6e35;
+  width: 35px;
+  height: 35px; }
 
 .price__filter-label,
 .price__filter-input {
@@ -504,6 +521,19 @@ body {
   margin: 0;
   padding: 0; }
 
+.info-heading {
+  font-size: 20px;
+  margin: 0;
+  padding: 0; }
+
+.content__info {
+  font-size: 14px;
+  line-height: 1.5em; }
+
+.content__info-column_left, .content__info-column_right {
+  width: 47%;
+  text-align: justify; }
+
 .model {
   width: 235px;
   border: 1px solid #dee1e4;
@@ -519,6 +549,36 @@ body {
 .model:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   transition: 0.3s; }
+
+.model__slider {
+  margin-left: -3px; }
+
+.model__slider-item {
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  border: 1px solid #dee1e4;
+  margin-left: 14px;
+  border-radius: 2px;
+  overflow: hidden; }
+
+.model__slider-item:first-child {
+  margin-left: 0; }
+
+.model__slider-item_active {
+  border: 1px solid #ff6e35; }
+
+.model__slider-img {
+  width: 100%;
+  max-width: 100%; }
+
+.first-image {
+  background: white;
+  border: 1px solid #dee1e4;
+  width: 137px;
+  height: 137px;
+  margin: 0 auto;
+  border-radius: 2px; }
 
 .model__title {
   font-size: 14px; }
@@ -607,8 +667,9 @@ body {
   border: 0;
   display: inline-block; }
 
-.btn-bucket:focus, .btn-bucket:active {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+.btn-bucket:focus, .btn-bucket:active, .btn-bucket:hover {
+  opacity: .9;
+  transition: .3s; }
 
 .footer {
   background: url("../../img/footer_lodyas.png");

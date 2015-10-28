@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru-RU">
 	<head>
 		<meta charset="utf-8">
 		<title>COOLTECH</title>
 		<meta name="viewport" content="width=1110, initial-scale=1.0">
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-		<link rel="stylesheet" href="bower/select2/dist/css/select2.min.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic,600italic,400italic" rel="stylesheet" type="text/css">
 		<!--modernizr-->
@@ -87,10 +86,10 @@
 							<h3 class="available__heading content-heading">Наличие в магазинах<span class="heading-arrow"></span></h3>
 							<fieldset class="available__filter cooltech-accordeon">
 								<label class="available__label">Во всех магазинах
-									<input type="radio" name="available" checked class="available__radio">
+									<input type="radio" name="available" value="allShop" checked class="available__radio">
 								</label>
 								<label class="available__label">В ближайшем ко мне магазине
-									<input type="radio" name="available" class="available__radio">
+									<input type="radio" name="available" value="nearShop" class="available__radio">
 								</label>
 							</fieldset>
 						</div>
@@ -138,14 +137,53 @@
 						<div class="color">
 							<h3 class="color__heading content-heading">Цвет<span class="heading-arrow"></span></h3>
 							<fieldset class="color__filter cooltech-accordeon">
-								<label class="color__filter-label">Красный
+								<label class="color__filter-label">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">Желтый
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
+									<input type="radio" class="color__filter-input">
+								</label>
+								<label class="color__filter-label">
 									<input type="radio" class="color__filter-input">
 								</label>
 							</fieldset>
 						</div>
+						<!--.color
+						h3.color__heading.content-heading Цвет
+							span.heading-arrow
+						fieldset.color__filter.cooltech-accordeon
+							label.color__filter-label Красный
+								input.color__filter-input(type="radio")
+							label.color__filter-label Желтый
+								input.color__filter-input(type="radio")
+						-->
 						<!--Операционные системы-->
 						<div class="os">
 							<h3 class="os__heading content-heading">Операционные системы<span class="heading-arrow"></span></h3>
@@ -182,23 +220,27 @@
 						</fieldset>
 						<!--Вид каталога-->
 						<ul class="filter__view right">
-							<li class="filter__view-item"><a href="#" data-view="table" class="filter__view-link filter__view-link_active"><span class="text-hide">1</span></a></li>
-							<li class="filter__view-item"><a href="#" data-view="icons" class="filter__view-link"><span class="text-hide">2</span></a></li>
-							<li class="filter__view-item"><a href="#" data-view="list" class="filter__view-link"><span class="text-hide">3</span></a></li>
+							<li class="filter__view-item"><a href="#" data-view="table" class="filter__view-link filter__view-link_table"><span class="text-hide">1</span></a><a href="#" data-view="icons" class="filter__view-link filter__view-link_icons"><span class="text-hide">1</span></a><a href="#" data-view="list" class="filter__view-link filter__view-link_list"><span class="text-hide">1</span></a>
+							</li>
 						</ul><span class="right">Вид каталога</span>
 					</div>
 					<!--Модели телефонов-->
 										<div data-rating="4" class="model model_view-icons">
-											<div class="model__slider">слайдер</div>
+											<div class="first-image"><img src="img/slider/1.jpg" class="model__slider-img model__slider-img_full"></div>
+											<ul class="model__slider">
+												<li class="model__slider-item"><img src="img/slider/1.jpg" class="model__slider-img"></li>
+												<li class="model__slider-item"><img src="img/slider/2.jpg" class="model__slider-img"></li>
+												<li class="model__slider-item"><img src="img/slider/3.jpg" class="model__slider-img"></li>
+											</ul>
 											<h4 class="model__title">Samsung GT-I9301I GALAXY S 3</h4>
 											<ul class="model__description">
-												<li class="model__description-item clearfix">Тип SIM-карты<span class="right">...</span></li>
-												<li class="model__description-item clearfix">Количество SIM-карт<span class="right">...</span></li>
-												<li class="model__description-item clearfix">Цвет<span class="right">...</span></li>
-												<li class="model__description-item clearfix">OS<span class="right">...</span></li>
-												<li class="model__description-item clearfix">Связь 3G<span class="right">...</span></li>
-												<li class="model__description-item clearfix">4G(LTE)<span class="right">...</span></li>
-												<li class="model__description-item clearfix">GPS-модуль<span class="right">...</span></li>
+												<li class="model__description-item clearfix">Тип SIM-карты<span class="right">Micro-SIM</span></li>
+												<li class="model__description-item clearfix">Количество SIM-карт<span class="right">1</span></li>
+												<li class="model__description-item clearfix">Цвет<span class="right">Белый</span></li>
+												<li class="model__description-item clearfix">OS<span class="right">Android</span></li>
+												<li class="model__description-item clearfix">Связь 3G<span class="right">Есть</span></li>
+												<li class="model__description-item clearfix">4G(LTE)<span class="right">Нет</span></li>
+												<li class="model__description-item clearfix">GPS-модуль<span class="right">Есть</span></li>
 											</ul>
 											<div class="rating-wrapper">
 												<ul class="rating">
@@ -209,7 +251,39 @@
 													<li class="rating__star-unfilled"></li>
 												</ul><span class="rating__count">4</span>
 											</div>
-											<div class="model__price">8 990<span class="rouble">&#8381;</span></div>
+											<div class="model__price">11290<span class="rouble">&#8381;</span></div>
+											<div class="available-btn-wrapper clearfix">
+												<div class="available-mark available-mark_true">В наличии</div>
+												<button class="btn btn-bucket right">В корзину</button>
+											</div>
+										</div>
+										<div data-rating="4" class="model model_view-icons">
+											<div class="first-image"><img src="img/slider/1.jpg" class="model__slider-img model__slider-img_full"></div>
+											<ul class="model__slider">
+												<li class="model__slider-item"><img src="img/slider/1.jpg" class="model__slider-img"></li>
+												<li class="model__slider-item"><img src="img/slider/2.jpg" class="model__slider-img"></li>
+												<li class="model__slider-item"><img src="img/slider/3.jpg" class="model__slider-img"></li>
+											</ul>
+											<h4 class="model__title">Microsoft Lumia 640 RM-1077</h4>
+											<ul class="model__description">
+												<li class="model__description-item clearfix">Тип SIM-карты<span class="right">Micro-SIM</span></li>
+												<li class="model__description-item clearfix">Количество SIM-карт<span class="right">2</span></li>
+												<li class="model__description-item clearfix">Цвет<span class="right">Белый</span></li>
+												<li class="model__description-item clearfix">OS<span class="right">Windows Phone</span></li>
+												<li class="model__description-item clearfix">Связь 3G<span class="right">Есть</span></li>
+												<li class="model__description-item clearfix">4G(LTE)<span class="right">Нет</span></li>
+												<li class="model__description-item clearfix">GPS-модуль<span class="right">A-GPS</span></li>
+											</ul>
+											<div class="rating-wrapper">
+												<ul class="rating">
+													<li class="rating__star-filled"></li>
+													<li class="rating__star-filled"></li>
+													<li class="rating__star-filled"></li>
+													<li class="rating__star-filled"></li>
+													<li class="rating__star-unfilled"></li>
+												</ul><span class="rating__count">4</span>
+											</div>
+											<div class="model__price">10990<span class="rouble">&#8381;</span></div>
 											<div class="available-btn-wrapper clearfix">
 												<div class="available-mark available-mark_true">В наличии</div>
 												<button class="btn btn-bucket right">В корзину</button>
@@ -218,14 +292,18 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="content__info">
-					<h2>Важная информация</h2>
-					<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-					<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-					<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+				<h2 class="info-heading">Важная информация</h2>
+				<div class="content__info clearfix">
+					<div class="content__info-column_left left">
+						<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+						<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					</div>
+					<div class="content__info-column_right right">
+						<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+						<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -270,6 +348,7 @@
 		<script src="/js/filter.js" defer></script>
 		<script src="/js/slider.js" defer></script>
 		<script src="/js/select.js" defer></script>
+		<script src="/js/model-slider.js" defer></script>
 		<!--script(type="text/javascript", charset="utf-8", src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=luS6QIGUJZZ4XSS7w7euv8ibnFEsgiBf&width=100%&height=100%&lang=ru_RU&sourceType=constructor&id=yaMap")-->
 	</body>
 </html>

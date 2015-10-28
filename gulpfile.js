@@ -9,7 +9,7 @@ var livereload = require('gulp-livereload');
 var spritesmith = require('gulp.spritesmith');
 
 var paths = {
-	scss: 'app/scss/**/*.scss',
+	scss: 'app/scss/main.scss',
 	jade: 'app/jade/pages/*.jade',
 	jadeToWatch: 'app/jade/**/*.jade',
 	compass : {

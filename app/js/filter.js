@@ -1,13 +1,16 @@
 var filter = (function () {
 
 	var init = _listeners,
-		labels = $('label', '.left-block');
+		labels = $('label', '.left-block'),
+		checkedInputs = $('input[checked]', '.left-block'),
+		radios = $('input[type=radio]', '.available');
 
 	function _listeners() {
 
 		//При полной загрузке проверяем наличие заранее прочеканых полей
 		$(window).load(function() {
-			labels.each(_checkThat);
+			checkedInputs.each(_firstCheck);
+			console.log('LEFT FILTER');
 		});
 
 		//При клике по лейблу присваиваем ему класс 'active' - типа, поле прочекано
@@ -15,7 +18,18 @@ var filter = (function () {
 
 		//Сбрасываем фильтр
 		$('.filter-reset').on('click', _resetFilter);
+
+		//Чек радиобаттонов блока "Наличие в магазинах"
+		radios.on('change', _checkRadio);
+
 	};
+
+	function _firstCheck() {
+		var labelClass = $(this).parent().attr('class');
+		var labelClassActive = labelClass + '_active';
+
+		$(this).parent().addClass(labelClassActive);
+	}
 
 	function _checkThat() {
 		var that = $(this),
@@ -42,6 +56,21 @@ var filter = (function () {
 
 		labels.each(_checkThat);
 	}
+
+	function _checkRadio() {
+		radios.each(function() {
+			var that = $(this);
+
+			if(that.attr('checked')) {
+				that.parent().addClass('available__label_active');
+			}
+			else {
+				that.parent().removeClass('available__label_active');
+			}
+		});
+	}
+
+
 
 	return {
 		init: init
