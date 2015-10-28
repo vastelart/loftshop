@@ -22,6 +22,14 @@ var sliderModule = (function() {
 			}
 		});
 
+		startVal.on('change', function() {
+			$('#sliderRange').slider('values', 0, $(this).val());
+		});
+
+		endVal.on('change', function() {
+			$('#sliderRange').slider('values', 1, $(this).val());
+		});
+
 		console.log('SLIDER');
 	}
 
