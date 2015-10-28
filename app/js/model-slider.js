@@ -17,6 +17,8 @@ var modelSlider = (function () {
 				newSrc = that.attr('src');
 
 			fullImg.attr('src', newSrc);
+			that.parents('.model__slider').find('.model__slider-item').removeClass('model__slider-item_active');
+			that.parent().addClass('model__slider-item_active');
 		}
 
 		console.log('MODEL SLIDER');

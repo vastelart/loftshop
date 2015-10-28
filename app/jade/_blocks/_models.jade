@@ -1,6 +1,7 @@
 - var description = ['Тип SIM-карты', 'Количество SIM-карт', 'Цвет', 'OS', 'Связь 3G', '4G(LTE)', 'GPS-модуль']
 - var models = [{modelTitle: 'Samsung GT-I9301I GALAXY S 3', simType: 'Micro-SIM', simCount: '1', color: 'Белый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '11290', available: 'В наличии'}, {modelTitle: 'Microsoft Lumia 640 RM-1077', simType: 'Micro-SIM', simCount: '2', color: 'Белый', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '10990', available: 'В наличии'}]
-- var count = 0;
+- var count = 0
+- var images = [1,2,3]
 
 mixin model()
 	each model, index in models
@@ -8,12 +9,9 @@ mixin model()
 			.first-image
 				img.model__slider-img.model__slider-img_full(src="img/slider/1.jpg")
 			ul.model__slider
-				li.model__slider-item
-					img.model__slider-img(src="img/slider/1.jpg")
-				li.model__slider-item
-					img.model__slider-img(src="img/slider/2.jpg")
-				li.model__slider-item
-					img.model__slider-img(src="img/slider/3.jpg")
+				each img in images
+					li.model__slider-item
+						img.model__slider-img(src="img/slider/#{img}.jpg")
 			h4.model__title= model.modelTitle
 			ul.model__description
 				li.model__description-item.clearfix Тип SIM-карты

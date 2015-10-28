@@ -565,7 +565,7 @@ body {
 .model__slider-item:first-child {
   margin-left: 0; }
 
-.model__slider-item_active {
+.model__slider-item:active, .model__slider-item:focus, .model__slider-item_active {
   border: 1px solid #ff6e35; }
 
 .model__slider-img {

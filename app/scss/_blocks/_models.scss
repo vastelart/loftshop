@@ -9,7 +9,7 @@
 .model__slider {margin-left: -3px;}
 .model__slider-item {width: 33px; height: 33px; display: inline-block; border: 1px solid #dee1e4; margin-left: 14px; border-radius: 2px; overflow: hidden;}
 .model__slider-item:first-child {margin-left: 0;}
-.model__slider-item_active {border: 1px solid $orange;}
+.model__slider-item:active, .model__slider-item:focus, .model__slider-item_active {border: 1px solid $orange;}
 .model__slider-img {width: 100%; max-width: 100%;}
 .first-image {background: white; border: 1px solid #dee1e4; width: 137px; height: 137px; margin: 0 auto; border-radius: 2px;}
 
