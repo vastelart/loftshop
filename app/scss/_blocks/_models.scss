@@ -16,7 +16,13 @@
 
 .model-wrapper {margin-right: -15px; margin-bottom: 65px;}
 .model {width: 235px; border: 1px solid #dee1e4; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box; vertical-align: top;}
-.model.model_view-icons {margin: 0 15px 19px 0;}
+.model.model_view-icons {
+	margin: 0 15px 19px 0; 
+	
+	.articul {
+		display: none;
+	}
+}
 .model:hover {box-shadow: 0 0 8px rgba(black, .3); transition: $transition;}
 
 .model__slider {margin-left: -3px;}

@@ -606,6 +606,8 @@ body {
 
 .model.model_view-icons {
   margin: 0 15px 19px 0; }
+  .model.model_view-icons .articul {
+    display: none; }
 
 .model:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
