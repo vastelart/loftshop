@@ -106,9 +106,9 @@
 .navigation__link:active, .navigation__link:focus {background: $orange; color: white; text-decoration: none; transition: .3s;}
 
 .bcrumbs {@include nomargin(0); font-size: 14px;}
-.bcrumbs__item {margin-right: 8px;}
+.bcrumbs__item {margin-right: 5px;}
 .bcrumbs__link {position: relative;}
-.bcrumbs__link {color: #333; text-decoration: none; transition: $transition;}
-.bcrumbs__link:hover, .bcrumbs__link:active, .bcrumbs__link:focus {color: $orange; text-decoration: none; transition: $transition;}
+.bcrumbs__link {color: #333; text-decoration: none; transition: $transition; border-bottom-width: 1px; border-bottom-color: transparent; border-bottom-style: solid;}
+.bcrumbs__link:hover, .bcrumbs__link:active, .bcrumbs__link:focus, .bcrumbs__link_active {color: $orange; text-decoration: none; transition: $transition; border-bottom: 1px solid rgba($orange, .5);}
 
 .page-heading {font-size: 20px;}

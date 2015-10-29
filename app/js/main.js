@@ -4,11 +4,17 @@ var mainModule = (function () {
 	function _listeners() {
 		$('.address', '.header').on('click', _showYaMap);
 		$('#showYaMap', '.header').on('click', _showYaMap);
+		$('.pagination__link').on('click', _pagination);
 	}
 
 	function _showYaMap(e) {
 		e.preventDefault;
 		$('#yaMap').slideToggle(300);
+	}
+
+	function _pagination() {
+		event.preventDefault();
+		console.log($(this).text());
 	}
 
 	return {

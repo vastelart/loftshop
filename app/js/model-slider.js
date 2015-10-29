@@ -28,5 +28,3 @@ var modelSlider = (function () {
 		init: init
 	}
 })();
-
-modelSlider.init();

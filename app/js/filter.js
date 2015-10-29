@@ -76,5 +76,3 @@ var filter = (function () {
 		init: init
 	}
 })();
-
-filter.init();

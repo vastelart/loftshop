@@ -22,14 +22,7 @@ header.header
 				button(type="submit", name="submit", class="search-form__submit") Найти
 
 		//Extras
-		//+listSet('extras right', 'extras__item', 'extras__link', extras)
-		ul.extras.right
-			li.extras__item
-				a(href="#", id="showYaMap").extras__link Карта проезда
-			li.extras__item
-				a(href="#").extras__link История заказов
-			li.extras__item
-				a(href="#").extras__link Корзина
+		+listSet('extras right', 'extras__item', 'extras__link', extras)
 
 		div.ya-map-block(id="yaMap")
 
@@ -40,7 +33,14 @@ header.header
 
 	.container
 		//Breadcrumbs
-		+listSet('bcrumbs', 'bcrumbs__item', 'bcrumbs__link', bcrumbs)
+		//+listSet('bcrumbs', 'bcrumbs__item', 'bcrumbs__link', bcrumbs)
+		ul.bcrumbs
+			li.bcrumbs__item
+				a(href="#").bcrumbs__link Главная
+			li.bcrumbs__item
+				span.bcrumbs__arrow &gt;
+			li.bcrumbs__item
+				a(href="#").bcrumbs__link.bcrumbs__link_active Каталог
 
 		//Заголовок страницы
 		h2.page-heading Мобильные телефоны

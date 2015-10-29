@@ -37,5 +37,3 @@ var sliderModule = (function() {
 		init: init
 	}
 })();
-
-sliderModule.init();

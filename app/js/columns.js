@@ -2,11 +2,7 @@ var columnsModule = (function () {
 	var init  = _column;
 
 	function _column() {
-		$(window).on('load', function() {
-			$('.content__info-column_left').columnize({
-				columns: 1
-			});
-		});
+		$('.content__info').columnize({columns: 2});
 
 		console.log('COLUMNS');
 	}
@@ -15,5 +11,3 @@ var columnsModule = (function () {
 		init: init
 	}
 })();
-
-columnsModule.init();

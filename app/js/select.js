@@ -9,5 +9,3 @@ var selectModule = (function () {
 		init: init
 	}
 })();
-
-selectModule.init();
