@@ -1,10 +1,22 @@
-@mixin nomargin($marg) {
+﻿@mixin nomargin($marg) {
 	margin: $marg;
 	padding: $marg;
 }
 
-.model-wrapper {margin-left: -15px;}
-.model {width: 235px; border: 1px solid #dee1e4; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box; margin: 0 0 19px 15px; vertical-align: top;}
+@mixin articul {
+	.articul {font-weight: bold; font-size: 12px; text-align: center; color: #7f7f7f;}
+	.articul__number {font-weight: 600; font-size: 14px; color: #333;}
+}
+
+@mixin overtext {
+	 overflow: hidden;
+	 white-space: nowrap;
+	 text-overflow: ellipsis;
+}
+
+.model-wrapper {margin-right: -15px; margin-bottom: 65px;}
+.model {width: 235px; border: 1px solid #dee1e4; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box; vertical-align: top;}
+.model.model_view-icons {margin: 0 15px 19px 0;}
 .model:hover {box-shadow: 0 0 8px rgba(black, .3); transition: $transition;}
 
 .model__slider {margin-left: -3px;}
@@ -72,18 +84,17 @@
 	}
 }
 
-//Table
+//Table view
 
 .model.model_view-table {
 	width: 100%;
-	max-width: 100%;
+	max-width: 744px;
 	display: block;
 	@include nomargin(0);
 	box-sizing: border-box;
-	margin-left: 15px;
-	margin-right: 15px;
 	position: relative;
 	padding: 20px;
+	margin-top: -1px;
 
 	&:hover {z-index: 999;}
 
@@ -96,10 +107,53 @@
 	.model__title {text-align: left; vertical-align: top; line-height: normal; @include nomargin(0); margin-bottom: 25px; font-size: 16px;}
 	.model__description {width: 100%;}
 	.model__description-item {display: inline-block; font-weight: 600;}
-	span.right {clear: both !important; padding: 0 10px; font-weight: normal;}
+	.model__description-item-prop {clear: both !important; padding: 0 10px; font-weight: normal;}
 	.model__description-item:nth-child(odd) {background: transparent;}
 	.rating-wrapper {margin: 0;}
 	.table-line {position: absolute; top: 20px; bottom: 20px; right: 155px; width: 1px; background: #dee1e4;}
 	.btn-bucket {position: absolute; bottom: 40px; right: 25px;}
 	.available-mark {position: absolute; right: 25px; bottom: 20px; line-height: normal;}
+
+	@include articul;
+}
+
+//List view
+
+.model.model_view-list {
+	width: 100%;
+	max-width: 744px;
+	display: block;
+	@include nomargin(0);
+	box-sizing: border-box;
+	position: relative;
+	padding: 7px 15px 3px 15px;
+	border-radius: 0;
+	margin-top: -1px;
+
+	&:hover {z-index: 999;}
+
+	.model__price {display: inline-block; line-height: 34px; text-align: right; @include overtext; width: 105px; max-width: 100px; @include nomargin(0); margin-left: 5px;}
+
+	.first-image {margin-bottom: 15px;}
+	.model__slider-wrapper {display: none;}
+	.model__slider {@include nomargin(0);}
+	.model__info-wrapper {float: left; width: 375px;}
+	.model__title {text-align: left; vertical-align: top; line-height: 34px; @include nomargin(0); font-size: 14px; font-weight: normal; width: 270px; max-width: 270px; display: inline-block; @include overtext; margin-left: 115px;}
+	.model__title:before {display: inline-block; content: "Смартфон"; font-weight: normal; margin-right: 7px;}
+	.model__description {display: none;}
+	.model__description-item {display: inline-block; font-weight: 600;}
+	.model__description-item-prop {clear: both !important; padding: 0 10px; font-weight: normal;}
+	.model__description-item:nth-child(odd) {background: transparent;}
+	.rating-wrapper {display: none;}
+	.table-line {display: none;}
+	.available-btn-wrapper {display: inline-block; width: 215px; float: right; vertical-align: top;}
+	.btn-bucket {display: inline-block;}
+	.available-mark {line-height: 34px; display: inline;}
+
+	@include articul;
+
+	.articul {display: inline-block; position: absolute; left: 15px; top: 14px;}
+
+	&:first-child {border-radius: 7px 7px 0 0;}
+	&:last-child {border-radius: 0 0 7px 7px;}
 }

@@ -5,6 +5,8 @@ var mainModule = (function () {
 		$('.address', '.header').on('click', _showYaMap);
 		$('#showYaMap', '.header').on('click', _showYaMap);
 		$('.pagination__link').on('click', _pagination);
+
+		console.log($('#samurai').text());
 	}
 
 	function _showYaMap(e) {

@@ -1,13 +1,13 @@
 - var description = ['Тип SIM-карты', 'Количество SIM-карт', 'Цвет', 'OS', 'Связь 3G', '4G(LTE)', 'GPS-модуль']
 
-- var models = [{modelTitle: 'Samsung GT-I9301I GALAXY S 3', simType: 'Micro-SIM', simCount: '1', color: 'Белый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '11 290', available: 'В наличии'}, {modelTitle: 'Microsoft Lumia 640 RM-1077', simType: 'Micro-SIM', simCount: '2', color: 'Белый', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '10 990', available: 'В наличии'}, {modelTitle: 'Archos 50 Oxygen Plus', simType: 'Micro-SIM', simCount: '2', color: 'Серый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '9 990', available: 'В наличии'}, {modelTitle: 'Philips S398 Black', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Android', threeG: 'Нет', fourG: 'Нет', GPS: 'Есть', modelPrice: '8 990', available: 'В наличии'}, {modelTitle: 'Microsoft Lumia 430 RM-10', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '5 390', available: 'В наличии'}, {modelTitle: 'Senseit L301 Black', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '4 990', available: 'В наличии'}, {modelTitle: 'HIGHSCREEN WinWin Black', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '3 990', available: 'В наличии'}, {modelTitle: 'Alcatel OT4013D PIXI 3 (2 SIM)', simType: 'Micro-SIM', simCount: '2', color: 'Белый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '3 290', available: 'В наличии'}, {modelTitle: 'Fly IQ434 Era Nano 5', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Android', threeG: 'Нет', fourG: 'Нет', GPS: 'Нет', modelPrice: '1 790', available: 'В наличии'} ]
+- var models = [{modelTitle: 'Samsung GT-I9301I GALAXY S 3', simType: 'Micro-SIM', simCount: '1', color: 'Белый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '11 290', available: 'В наличии'}, {modelTitle: 'Microsoft Lumia 640 RM-1077', simType: 'Micro-SIM', simCount: '2', color: 'Белый', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '10 990', available: 'В наличии'}, {modelTitle: 'Archos 50 Oxygen Plus', simType: 'Micro-SIM', simCount: '2', color: 'Серый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '9 990', available: 'В наличии'}, {modelTitle: 'Philips S398 Black', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Android', threeG: 'Нет', fourG: 'Нет', GPS: 'Есть', modelPrice: '8 990', available: 'В наличии'}, {modelTitle: 'Microsoft Lumia 430 RM-10', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '5 390', available: 'В наличии'}, {modelTitle: 'Senseit L301 Black', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '4 990', available: 'В наличии'}, {modelTitle: 'HIGHSCREEN WinWin Black', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Windows Phone', threeG: 'Есть', fourG: 'Нет', GPS: 'Есть', modelPrice: '3 990', available: 'В наличии'}, {modelTitle: 'Alcatel OT4013D PIXI 3 (2 SIM)', simType: 'Micro-SIM', simCount: '2', color: 'Белый', os: 'Android', threeG: 'Есть', fourG: 'Нет', GPS: 'A-GPS', modelPrice: '3 290', available: 'В наличии'}, {modelTitle: 'Fly IQ434 Era Nano 5', simType: 'Micro-SIM', simCount: '2', color: 'Черный', os: 'Android', threeG: 'Нет', fourG: 'Нет', GPS: 'Нет', modelPrice: '1 790', available: 'В наличии'}]
 
 - var images = [1,2,3]
 - var pages = ['<', '1', '2', '3', '>']
 
 mixin model()
 	each model, index in models
-		.model.clearfix.model_view-table(data-rating="4")
+		.model.clearfix.model_view-list(data-rating="4")
 			.model__slider-wrapper
 				.first-image
 					img.model__slider-img.model__slider-img_full(src="img/slider/1.jpg")
@@ -15,23 +15,25 @@ mixin model()
 					each img in images
 						li.model__slider-item
 							img.model__slider-img(src="img/slider/#{img}.jpg")
+			.articul Артикул
+				span.articul__number  189238
 			.model__info-wrapper
 				h4.model__title= model.modelTitle
 				ul.model__description
 					li.model__description-item.clearfix Тип SIM-карты
-							span.right= model.simType
+							span.model__description-item-prop.right= model.simType
 					li.model__description-item.clearfix Количество SIM-карт
-							span.right= model.simCount
+							span.model__description-item-prop.right= model.simCount
 					li.model__description-item.clearfix Цвет
-							span.right= model.color
+							span.model__description-item-prop.right= model.color
 					li.model__description-item.clearfix OS
-							span.right= model.os
+							span.model__description-item-prop.right= model.os
 					li.model__description-item.clearfix Связь 3G
-							span.right= model.threeG
+							span.model__description-item-prop.right= model.threeG
 					li.model__description-item.clearfix 4G(LTE)
-							span.right= model.fourG
+							span.model__description-item-prop.right= model.fourG
 					li.model__description-item.clearfix GPS-модуль
-							span.right= model.GPS
+							span.model__description-item-prop.right= model.GPS
 				.rating-wrapper
 					ul.rating
 						li.rating__star-filled
