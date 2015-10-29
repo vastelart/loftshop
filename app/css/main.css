@@ -503,7 +503,7 @@ body {
   border: 1px solid #dee1e4;
   border-radius: 7px;
   margin-bottom: 20px;
-  padding: 13px 0 11px 20px; }
+  padding: 13px 0 13px 20px; }
 
 .filter__sort {
   border: 0;
@@ -528,6 +528,43 @@ body {
   padding: 0;
   margin: -18px 0;
   margin-top: 4px; }
+
+.filter__view {
+  margin-left: 20px; }
+
+.filter__view-label, .sort-form__label {
+  color: #5d656c;
+  font-size: 14px; }
+
+.filter__view-link_table {
+  background-image: url(../img/sprite-views.png);
+  background-position: -156px 18px;
+  background-repeat: no-repeat; }
+
+.filter__view-link_table:hover, .filter__view-link_table:active, .filter__view-link_table:focus, .filter__view-link_table-active {
+  background-image: url(../img/sprite-views.png);
+  background-position: -156px -68px;
+  background-repeat: no-repeat; }
+
+.filter__view-link_icons {
+  background-image: url(../img/sprite-views.png);
+  background-position: 15px 18px;
+  background-repeat: no-repeat; }
+
+.filter__view-link_icons:hover, .filter__view-link_icons:active, .filter__view-link_icons:focus, .filter__view-link_icons-active {
+  background-image: url(../img/sprite-views.png);
+  background-position: -71px 18px;
+  background-repeat: no-repeat; }
+
+.filter__view-link_list {
+  background-image: url(../img/sprite-views.png);
+  background-position: 15px -68px;
+  background-repeat: no-repeat; }
+
+.filter__view-link_list:hover, .filter__view-link_list:active, .filter__view-link_list:focus, .filter__view-link_list-active {
+  background-image: url(../img/sprite-views.png);
+  background-position: -71px -68px;
+  background-repeat: no-repeat; }
 
 .info-heading {
   font-size: 20px;
