@@ -1,17 +1,17 @@
 /*
 Error: Undefined variable: "$orange".
-        on line 50 of e:\web\loftshop\app\scss\_blocks\_slider.scss
+        on line 49 of c:\WebServers\home\loftshop\app\scss\_blocks\_slider.scss
 
-45: .ui-slider {height: 3px;}
-46: .ui-slider.ui-slider-horizontal {
-47: 	background: #dee1e4;
-48: }
-49: .ui-slider-range {
-50: 	background: $orange;
-51: }
+44: .ui-slider {height: 3px;}
+45: .ui-slider.ui-slider-horizontal {
+46: 	background: #dee1e4;
+47: }
+48: .ui-slider-range {
+49: 	background: $orange;
+50: }
 
 Backtrace:
-e:\web\loftshop\app\scss\_blocks\_slider.scss:50
+c:\WebServers\home\loftshop\app\scss\_blocks\_slider.scss:49
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -58,4 +58,4 @@ c:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$orange\".\A         on line 50 of e:\web\loftshop\app\scss\_blocks\_slider.scss\A \A 45: .ui-slider {height: 3px;}\A 46: .ui-slider.ui-slider-horizontal {\A 47: 	background: #dee1e4;\A 48: }\A 49: .ui-slider-range {\A 50: 	background: $orange;\A 51: }"; }
+  content: "Error: Undefined variable: \"$orange\".\A         on line 49 of c:\WebServers\home\loftshop\app\scss\_blocks\_slider.scss\A \A 44: .ui-slider {height: 3px;}\A 45: .ui-slider.ui-slider-horizontal {\A 46: 	background: #dee1e4;\A 47: }\A 48: .ui-slider-range {\A 49: 	background: $orange;\A 50: }"; }

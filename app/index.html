@@ -11,7 +11,6 @@
 		<script src="bower/modernizr/modernizr.js"></script>
 	</head>
 	<body>
-		<div id="samurai" class="text-hide">Возьми себя в руки, дочь самурая &#128298;</div>
 		<div class="main-wrapper">
 			<header class="header">
 				<div class="top-block-wrapper">
@@ -31,7 +30,7 @@
 				<div class="logo-search-extras-wrapper container">
 					<!--Логотип-->
 					<div class="logo-wrapper">
-						<div class="logo"><img src="../../img/cooltech.png" alt="COOLTECH"></div>
+						<div class="logo"><a href="/"><img src="../../img/cooltech.png" alt="COOLTECH"></a></div>
 					</div>
 					<!--Поиск-->
 					<div class="search-form-wrapper">
@@ -139,40 +138,40 @@
 						<div class="color">
 							<h3 class="color__heading content-heading">Цвет<span class="heading-arrow"></span></h3>
 							<fieldset class="color__filter cooltech-accordeon">
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_white">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_grey">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_black">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_deepblue">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_red">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_yellow">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_orange">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_green">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_blue">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_purple">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_pink">
 									<input type="radio" class="color__filter-input">
 								</label>
-								<label class="color__filter-label">
+								<label class="color__filter-label color__filter-label_brown">
 									<input type="radio" class="color__filter-input">
 								</label>
 							</fieldset>
@@ -206,11 +205,13 @@
 						<fieldset class="filter__sort">
 							<label for="sortFormSelect" class="sort-form__label">Сортировать по
 								<select id="sortFormSelect" class="sort-form__select">
-									<option>По цене</option>
-									<option>По популярности</option>
+									<option class="select-item">цене</option>
+									<option selected class="select-item">популярности</option>
 								</select>
 							</label>
 						</fieldset>
+						<div class="selector"></div>
+						<div class="selector__options"></div>
 						<!--Вид каталога-->
 						<ul class="filter__view right">
 							<li class="filter__view-item"><a href="#" data-view="table" class="filter__view-link filter__view-link_table"><span class="text-hide">1</span></a><a href="#" data-view="icons" class="filter__view-link filter__view-link_icons"><span class="text-hide">1</span></a><a href="#" data-view="list" class="filter__view-link filter__view-link_list"><span class="text-hide">1</span></a>
@@ -608,7 +609,7 @@
 			<div class="container clearfix">
 				<div class="clearfix">
 					<div class="left">
-						<div class="footer-logo-wrapper"><img src="/img/cooltech-footer.png" class="footer-logo"></div>
+						<div class="footer-logo-wrapper"><a href="/"><img src="/img/cooltech-footer.png" class="footer-logo"></a></div>
 					</div>
 					<div class="right">
 						<div class="footer-cocials-wrapper">
@@ -633,6 +634,7 @@
 				</div>
 				<!--Копирайт-->
 				<div class="copyright text-center">All rights reserved. 2015. No copy allowed</div>
+				<div id="samurai" class="text-hide">Фронтендерам: Возьми себя в руки, дочь самурая &#128298;</div>
 			</div>
 			<div class="copyright-top-line"></div>
 		</footer>
@@ -649,6 +651,6 @@
 		<script src="/js/model-slider.js" defer></script>
 		<script src="/js/view.js" defer></script>
 		<script src="/js/inits.js" defer></script>
-		<!--script(type="text/javascript", charset="utf-8", src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=luS6QIGUJZZ4XSS7w7euv8ibnFEsgiBf&width=100%&height=100%&lang=ru_RU&sourceType=constructor&id=yaMap")-->
+		<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=luS6QIGUJZZ4XSS7w7euv8ibnFEsgiBf&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;id=yaMap"></script>
 	</body>
 </html>

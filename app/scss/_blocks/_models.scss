@@ -14,6 +14,11 @@
 	 text-overflow: ellipsis;
 }
 
+@mixin modelBorder {
+	&:first-child {border-radius: 7px 7px 0 0;}
+	&:last-child {border-radius: 0 0 7px 7px;}
+}
+
 .model-wrapper {margin-right: -15px; margin-bottom: 65px;}
 .model {width: 235px; border: 1px solid #dee1e4; @include nomargin(0); display: inline-block; padding: 15px 10px; border-radius: 7px; transition: $transition; background: white; box-sizing: border-box; vertical-align: top;}
 .model.model_view-icons {
@@ -101,6 +106,8 @@
 	position: relative;
 	padding: 20px;
 	margin-top: -1px;
+	padding-bottom: 35px;
+	border-radius: 0;
 
 	&:hover {z-index: 999;}
 
@@ -121,6 +128,10 @@
 	.available-mark {position: absolute; right: 25px; bottom: 20px; line-height: normal;}
 
 	@include articul;
+
+	.articul {position: absolute; left: 20px; bottom: 15px;}
+
+	@include modelBorder;
 }
 
 //List view
@@ -160,6 +171,5 @@
 
 	.articul {display: inline-block; position: absolute; left: 15px; top: 14px;}
 
-	&:first-child {border-radius: 7px 7px 0 0;}
-	&:last-child {border-radius: 0 0 7px 7px;}
+	@include modelBorder;
 }

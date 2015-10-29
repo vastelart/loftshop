@@ -6,8 +6,10 @@
 		fieldset.filter__sort
 			label.sort-form__label(for="sortFormSelect") Сортировать по
 				select.sort-form__select(id="sortFormSelect")
-					option По цене
-					option По популярности
+					option.select-item цене
+					option(selected).select-item популярности
+		.selector
+		.selector__options
 
 		//Вид каталога
 		ul.filter__view.right

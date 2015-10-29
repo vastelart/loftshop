@@ -225,7 +225,8 @@ body {
   font-weight: light;
   padding-left: 15px;
   color: #b2b2b2;
-  border: 1px solid #dee1e4; }
+  border: 1px solid #dee1e4;
+  border-radius: 5px 0 0 5px; }
 
 .search-form__submit {
   width: 75px;
@@ -235,7 +236,8 @@ body {
   color: white;
   background: #ff6e35;
   border: 0;
-  font-weight: 600; }
+  font-weight: 600;
+  border-radius: 0 5px 5px 0; }
 
 .ya-map-block {
   height: 300px;
@@ -243,7 +245,8 @@ body {
   display: none; }
 
 .navigation-wrapper {
-  background: white; }
+  background: white;
+  margin-bottom: 25px; }
 
 .navigation {
   padding: 0 10px; }
@@ -269,7 +272,8 @@ body {
 .bcrumbs {
   margin: 0;
   padding: 0;
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 25px; }
 
 .bcrumbs__item {
   margin-right: 5px; }
@@ -292,7 +296,10 @@ body {
   border-bottom: 1px solid rgba(255, 110, 53, 0.5); }
 
 .page-heading {
-  font-size: 20px; }
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px; }
 
 .left-block {
   width: 332px;
@@ -329,7 +336,9 @@ body {
   text-decoration: none;
   color: #333;
   transition: .3s;
-  border-bottom: 1px solid #dee1e4; }
+  border-bottom: 1px solid #dee1e4;
+  color: #5d656c;
+  font-size: 14px; }
 
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {
   background: #d9e5ea;
@@ -398,8 +407,11 @@ body {
   margin-bottom: -5px;
   margin-right: 10px; }
 
-.color {
-  padding-bottom: 0; }
+.color__heading {
+  margin-bottom: 5px; }
+
+.color__filter {
+  margin-bottom: -30px; }
 
 .color__filter-label {
   display: inline-block;
@@ -413,6 +425,42 @@ body {
   border: 2px solid #ff6e35;
   width: 35px;
   height: 35px; }
+
+.color__filter-label_whiter {
+  background: #fff; }
+
+.color__filter-label_grey {
+  background: #cccccc; }
+
+.color__filter-label_black {
+  background: #000; }
+
+.color__filter-label_deepblue {
+  background: #0a3153; }
+
+.color__filter-label_red {
+  background: #ff1800; }
+
+.color__filter-label_yellow {
+  background: #fff343; }
+
+.color__filter-label_orange {
+  background: #fb914a; }
+
+.color__filter-label_green {
+  background: #92c37c; }
+
+.color__filter-label_blue {
+  background: #40a6ff; }
+
+.color__filter-label_purple {
+  background: #9870ad; }
+
+.color__filter-label_pink {
+  background: #dc78ad; }
+
+.color__filter-label_brown {
+  background: #7f401d; }
 
 .price__filter-label,
 .price__filter-input {
@@ -503,7 +551,8 @@ body {
   border: 1px solid #dee1e4;
   border-radius: 7px;
   margin-bottom: 20px;
-  padding: 13px 0 13px 20px; }
+  padding: 13px 0 13px 20px;
+  position: relative; }
 
 .filter__sort {
   border: 0;
@@ -566,6 +615,38 @@ body {
   background-position: -71px -68px;
   background-repeat: no-repeat; }
 
+.sort-form__select {
+  display: none; }
+
+.selector {
+  width: 110px;
+  background: white;
+  border-top: 1px solid #ddd;
+  border-radius: 3px;
+  color: #5d656c;
+  font-size: 14px;
+  padding: 5px 15px;
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer; }
+
+.selector__link {
+  color: #5d656c;
+  font-size: 14px;
+  display: block;
+  padding: 5px 5px; }
+
+.selector__options {
+  display: none;
+  width: 110px;
+  position: absolute;
+  left: 143px;
+  top: 37px;
+  background: white;
+  padding: 5px 15px;
+  z-index: 3;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); }
+
 .info-heading {
   font-size: 20px;
   margin: 0;
@@ -576,10 +657,12 @@ body {
   line-height: 1.5em; }
 
 .content__info p {
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  text-indent: 35px; }
 
 .first.column, .last.column {
-  width: 530px !important; }
+  width: 530px !important;
+  text-align: justify; }
 
 .first.column {
   float: left !important; }
@@ -778,7 +861,9 @@ body {
   box-sizing: border-box;
   position: relative;
   padding: 20px;
-  margin-top: -1px; }
+  margin-top: -1px;
+  padding-bottom: 35px;
+  border-radius: 0; }
   .model.model_view-table:hover {
     z-index: 999; }
   .model.model_view-table .model__price {
@@ -844,6 +929,14 @@ body {
     font-weight: 600;
     font-size: 14px;
     color: #333; }
+  .model.model_view-table .articul {
+    position: absolute;
+    left: 20px;
+    bottom: 15px; }
+  .model.model_view-table:first-child {
+    border-radius: 7px 7px 0 0; }
+  .model.model_view-table:last-child {
+    border-radius: 0 0 7px 7px; }
 
 .model.model_view-list {
   width: 100%;

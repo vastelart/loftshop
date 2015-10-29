@@ -2,6 +2,11 @@ $ffamily: 'Open Sans', 'Arial', sans-serif;
 $grayborder: 1px solid #ccc;
 $orange: #ff6e35;
 $transition: .3s;
+$classes: ('whiter':#fff, 'grey':#cccccc, 'black':#000, 'deepblue':#0a3153, 'red':#ff1800, 'yellow':#fff343, 'orange':#fb914a, 'green':#92c37c, 'blue':#40a6ff, 'purple':#9870ad, 'pink':#dc78ad, 'brown':#7f401d);
+
+@mixin marginbottom {
+	margin-bottom: 25px;
+}
 
 @mixin bordermix($bord) {
 	border: $bord;

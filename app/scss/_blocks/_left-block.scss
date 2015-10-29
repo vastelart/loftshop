@@ -1,8 +1,5 @@
 @import "../_includes/_vars_mixins";
 
-//$colors: ('#fff', '#cccccc', '#000', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d');
-//$classes: white, grey, black, deep-blue, red, yellow, orange, green, blue, purple, pink, brown;
-
 .left-block {width: 332px; margin-bottom: 60px;}
 
 .left-filter-wrapper {background: white; @include bordermix(1px solid #dee1e4); @include borderRadiusMix(7px);}
@@ -14,7 +11,7 @@
 .os {padding: 10px 25px; padding-bottom: 15px; border-bottom: 1px solid #dee1e4; font-size: 14px;}
 
 .model-type {list-style-type: none; @include nomargin(0); border: 1px solid #dee1e4; margin-bottom: 35px; border-radius: 7px; background: white; overflow: hidden;}
-.model-type__link {padding: 15px 15px 15px 30px; display: block; text-decoration: none; color: #333; transition: .3s; border-bottom: 1px solid #dee1e4;}
+.model-type__link {padding: 15px 15px 15px 30px; display: block; text-decoration: none; color: #333; transition: .3s; border-bottom: 1px solid #dee1e4; color: #5d656c; font-size: 14px;}
 .model-type__link:hover, .model-type__link:active, .model-type__link:focus {background: #d9e5ea; transition: .3s;}
 
 .available__radio,
@@ -76,9 +73,9 @@
   	margin-right: 10px;
 }
 
-.color {
-  padding-bottom: 0;
-}
+.color__heading {margin-bottom: 5px;}
+.color__filter {margin-bottom: -30px;}
+
 .color__filter-label {
   display: inline-block;
   width: 37px;
@@ -94,4 +91,10 @@
   border: 2px solid $orange;
   width: 35px;
   height: 35px;
+}
+
+@each $color, $molor in $classes {
+  .color__filter-label_#{$color} {
+    background: $molor;
+  }
 }

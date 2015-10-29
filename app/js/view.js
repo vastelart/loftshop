@@ -2,16 +2,18 @@ var viewModule = (function () {
 	var init = _view;
 
 	var viewLink = $('.filter__view-link');
-	var models = $('.model');
+	var models = $('.model', '.model-wrapper');
 
 	function _view() {
 		viewLink.on('click', function(event) {
 			event.preventDefault();
+
 			var view = $(this).data('view');
 
 			models.each(function() {
-				$(this).attr('class', '');
-				$(this).addClass('model model_view-' + view);
+				var that = $(this);
+
+				that.attr('class', '').addClass('model model_view-' + view);
 			});
 
 			console.log(view);

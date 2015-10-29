@@ -1,7 +1,7 @@
 .info-heading {font-size: 20px; @include nomargin(0);}
 .content__info {font-size: 14px; line-height: 1.5em;}
-.content__info p {margin-bottom: 25px;}
+.content__info p {margin-bottom: 25px; text-indent: 35px;}
 
-.first.column, .last.column {width: 530px !important;}
+.first.column, .last.column {width: 530px !important; text-align: justify;}
 .first.column {float: left !important;}
 .last.column {float: right !important;}
