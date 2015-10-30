@@ -367,45 +367,45 @@ body {
   display: inline-block;
   content: " ";
   background-image: url(../../img/sprite-layout.png);
-  background-position: -89px 0px;
   width: 19px;
   height: 19px;
   margin-top: 5px;
   margin-bottom: -5px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background-position: -89px 0px; }
 
 .os__filter-label_active:before, .brands__filter-label_active:before {
   display: inline-block;
   content: " ";
   background-image: url(../../img/sprite-layout.png);
-  background-position: 0px 0px;
   width: 19px;
   height: 19px;
   margin-top: 5px;
   margin-bottom: -5px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background-position: 0px 0px; }
 
 .available__label:before {
   display: inline-block;
   content: " ";
+  background-image: url(../../img/sprite-layout.png);
   width: 19px;
   height: 19px;
-  background-image: url(../../img/sprite-layout.png);
-  background-position: -89px -89px;
   margin-top: 5px;
   margin-bottom: -5px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background-position: -89px -89px; }
 
 .available__label_active:before {
   display: inline-block;
   content: " ";
+  background-image: url(../../img/sprite-layout.png);
   width: 19px;
   height: 19px;
-  background-image: url(../../img/sprite-layout.png);
-  background-position: 0px -89px;
   margin-top: 5px;
   margin-bottom: -5px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background-position: 0px -89px; }
 
 .color__heading {
   margin-bottom: 5px; }
@@ -421,7 +421,7 @@ body {
   margin: 0 22px 22px 0;
   cursor: pointer; }
 
-.color__filter-label:hover {
+.color__filter-label:hover, .color__filter-label:active, .color__filter-label:focus, .color__filter-label_active {
   border: 2px solid #ff6e35;
   width: 35px;
   height: 35px; }

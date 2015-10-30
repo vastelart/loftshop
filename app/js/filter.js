@@ -3,7 +3,8 @@ var filter = (function () {
 	var init = _listeners,
 		labels = $('label', '.left-block'),
 		checkedInputs = $('input[checked]', '.left-block'),
-		radios = $('input[type=radio]', '.available');
+		radios = $('input[type=radio]', '.available'),
+		colors = $('.color__filter-label', '.color');
 
 	function _listeners() {
 
@@ -15,6 +16,7 @@ var filter = (function () {
 
 		//При клике по лейблу присваиваем ему класс 'active' - типа, поле прочекано
 		labels.on('click', _checkThat);
+		colors.on('click', _colorThat);
 
 		//Сбрасываем фильтр
 		$('.filter-reset').on('click', _resetFilter);
@@ -46,6 +48,15 @@ var filter = (function () {
 			}
 	}
 
+	function _colorThat() {
+		colors.each(function() {
+			var that = $(this);
+			that.removeClass('color__filter-label_active');
+		});
+
+		$(this).addClass('color__filter-label_active');
+	}
+
 	function _resetFilter() {
 		event.preventDefault();
 		var inputs = $(this).parent().find('input'),
@@ -69,8 +80,6 @@ var filter = (function () {
 			}
 		});
 	}
-
-
 
 	return {
 		init: init

@@ -1,5 +1,16 @@
 @import "../_includes/_vars_mixins";
 
+@mixin availableBefore {
+  display: inline-block;
+  content: " ";
+  background-image: url(../../img/sprite-layout.png);
+  width: 19px;
+  height: 19px;
+  margin-top: 5px;
+  margin-bottom: -5px;
+  margin-right: 10px;
+}
+
 .left-block {width: 332px; margin-bottom: 60px;}
 
 .left-filter-wrapper {background: white; @include bordermix(1px solid #dee1e4); @include borderRadiusMix(7px);}
@@ -26,51 +37,27 @@
 .available__label, .os__filter-label, .brands__filter-label {display: block; line-height: 3em; cursor: pointer;}
 
 .os__filter-label:before, .brands__filter-label:before {
-	display: inline-block;
-	content: " ";
-	background-image: url(../../img/sprite-layout.png);
-  	background-position: -89px 0px;
-  	width: 19px;
-  	height: 19px;
-  	margin-top: 5px;
-  	margin-bottom: -5px;
-  	margin-right: 10px;
+	@include availableBefore;
+	background-position: -89px 0px;
+	
 }
 
 .os__filter-label_active:before, .brands__filter-label_active:before {
-	display: inline-block;
-	content: " ";
-	background-image: url(../../img/sprite-layout.png);
-  	background-position: 0px 0px;
-  	width: 19px;
-  	height: 19px;
-  	margin-top: 5px;
-  	margin-bottom: -5px;
-  	margin-right: 10px;
+	@include availableBefore;
+	background-position: 0px 0px;
+	
 }
 
 .available__label:before {
-	display: inline-block;
-	content: " ";
-	width: 19px;
-	height: 19px;
-	background-image: url(../../img/sprite-layout.png);
-  	background-position: -89px -89px;
-  	margin-top: 5px;
-  	margin-bottom: -5px;
-  	margin-right: 10px;
+	@include availableBefore;
+	background-position: -89px -89px;
+	
 }
 
 .available__label_active:before {
-	display: inline-block;
-	content: " ";
-	width: 19px;
-	height: 19px;
-	background-image: url(../../img/sprite-layout.png);
-  	background-position: 0px -89px;
-  	margin-top: 5px;
-  	margin-bottom: -5px;
-  	margin-right: 10px;
+	@include availableBefore;
+	background-position: 0px -89px;
+	
 }
 
 .color__heading {margin-bottom: 5px;}
@@ -86,15 +73,15 @@
   //transition: $transition;
 }
 
-.color__filter-label:hover {
+.color__filter-label:hover, .color__filter-label:active, .color__filter-label:focus, .color__filter-label_active {
   //transition: $transition;
   border: 2px solid $orange;
   width: 35px;
   height: 35px;
 }
 
-@each $color, $molor in $classes {
-  .color__filter-label_#{$color} {
-    background: $molor;
+@each $classm, $color in $classes {
+  .color__filter-label_#{$classm} {
+    background: $color;
   }
 }
