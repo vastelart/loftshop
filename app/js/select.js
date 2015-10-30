@@ -19,8 +19,12 @@ var selectModule = (function () {
 		});
 
 		var selectorLink = $('.selector__link', '.selector__options');
+		var optionsWidth = selectorOptions.width();
+
+		selector.width(optionsWidth + 15);
+		selectorOptions.width(optionsWidth + 15);
 		
-		console.log(selectorLink);
+		console.log(optionsWidth);
 
 		selectorLink.click(function (event) {
 			event.preventDefault();
