@@ -41,7 +41,7 @@ body {
   content: " ";
   height: 11px;
   width: 18px;
-  background: url("../../img/layout/heading-arrow.png") 0 0 no-repeat;
+  background: url("../../img/heading-arrow.png") 0 0 no-repeat;
   right: -10px;
   top: 3px;
   transition: 0.3s; }

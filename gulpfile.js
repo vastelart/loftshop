@@ -8,6 +8,13 @@ var plumber = require('gulp-plumber');
 var livereload = require('gulp-livereload');
 var spritesmith = require('gulp.spritesmith');
 
+var	useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-minify-css')
+    clean = require('gulp-clean'),
+    imagemin = require('gulp-imagemin');
+
 var paths = {
 	scss: 'app/scss/**/*.scss',
 	jade: 'app/jade/pages/*.jade',
@@ -19,6 +26,31 @@ var paths = {
 			imgFolder   : 'app/img'
 		}
 };
+
+gulp.task('clean', function() {
+	return gulp.src('dist', {read: false})
+		.pipe(clean());
+});
+
+gulp.task('build', ['imagemin'], function() {
+    var assets = useref.assets();
+
+    return gulp.src(['app/*.html', 'app/favicon.ico'])
+    .pipe(assets)
+    .pipe(gulpif('*.js', uglify()))
+	.pipe(gulpif('*.css', minifyCss()))
+    .pipe(assets.restore())
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('imagemin', function() {
+    return gulp.src('app/img/*.*')
+        .pipe(imagemin({
+            progressive: true
+        }))
+        .pipe(gulp.dest('dist/img'));
+});
  
 gulp.task('serve', function() {
   gulp.src('app')
@@ -70,3 +102,4 @@ gulp.task('sprite', function () {
   }));
   return spriteData.pipe(gulp.dest('sprite'));
 });
+
