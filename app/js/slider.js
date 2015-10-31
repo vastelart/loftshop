@@ -30,7 +30,7 @@ var sliderModule = (function() {
 			$('#sliderRange').slider('values', 1, $(this).val());
 		});
 
-		console.log('SLIDER');
+		console.log('PRICE RANGE SLIDER');
 	}
 
 	return {

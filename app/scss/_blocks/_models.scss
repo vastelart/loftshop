@@ -151,18 +151,19 @@
 
 	.model__price {display: inline-block; line-height: 34px; text-align: right; @include overtext; width: 105px; max-width: 100px; @include nomargin(0); margin-left: 5px;}
 
-	.first-image {margin-bottom: 15px;}
 	.model__slider-wrapper {display: none;}
-	.model__slider {@include nomargin(0);}
+	.rating-wrapper {display: none;}
+	.table-line {display: none;}
+	.model__description {display: none;}
 	.model__info-wrapper {float: left; width: 375px;}
 	.model__title {text-align: left; vertical-align: top; line-height: 34px; @include nomargin(0); font-size: 14px; font-weight: normal; width: 270px; max-width: 270px; display: inline-block; @include overtext; margin-left: 115px;}
 	.model__title:before {display: inline-block; content: "Смартфон"; font-weight: normal; margin-right: 7px;}
-	.model__description {display: none;}
 	.model__description-item {display: inline-block; font-weight: 600;}
 	.model__description-item-prop {clear: both !important; padding: 0 10px; font-weight: normal;}
 	.model__description-item:nth-child(odd) {background: transparent;}
-	.rating-wrapper {display: none;}
-	.table-line {display: none;}
+	
+	.model__extras {display: inline-block; width: 335px;}
+
 	.available-btn-wrapper {display: inline-block; width: 215px; float: right; vertical-align: top;}
 	.btn-bucket {display: inline-block;}
 	.available-mark {line-height: 34px; display: inline;}

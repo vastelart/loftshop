@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'nomargin'.
-        on line 20 of e:\web\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'
-        from line 20 of e:\web\loftshop\app\scss\_blocks\_footer.scss
+        on line 21 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'
+        from line 21 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss
 
-15: .footer-navigation__item {display: inline-block; margin-right: 25px;}
-16: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}
-17: .footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}
-18: 
-19: .footer-cocials-wrapper {padding: 35px 0;}
-20: .footer-socials {@include nomargin(0);}
-21: .footer-socials__item {display: inline-block; margin-left: 25px;}
-22: .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}
-23: 
-24: .footer-socials__link_fb {
-25: 	background-image: url(../../img/sprite-socials.png);
+16: .footer-navigation__item {display: inline-block; margin-right: 25px;}
+17: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}
+18: .footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}
+19: 
+20: .footer-cocials-wrapper {padding: 35px 0;}
+21: .footer-socials {@include nomargin(0);}
+22: .footer-socials__item {display: inline-block; margin-left: 25px;}
+23: .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}
+24: 
+25: .footer-socials__link_fb {
+26: 	background-image: url(../../img/sprite-socials.png);
 
 Backtrace:
-e:\web\loftshop\app\scss\_blocks\_footer.scss:20:in `nomargin'
-e:\web\loftshop\app\scss\_blocks\_footer.scss:20
+c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss:21:in `nomargin'
+c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss:21
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:98:in `block in with_mixin'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
@@ -66,4 +66,4 @@ c:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'nomargin'.\A         on line 20 of e:\web\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'\A         from line 20 of e:\web\loftshop\app\scss\_blocks\_footer.scss\A \A 15: .footer-navigation__item {display: inline-block; margin-right: 25px;}\A 16: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}\A 17: .footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}\A 18: \A 19: .footer-cocials-wrapper {padding: 35px 0;}\A 20: .footer-socials {@include nomargin(0);}\A 21: .footer-socials__item {display: inline-block; margin-left: 25px;}\A 22: .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}\A 23: \A 24: .footer-socials__link_fb {\A 25: 	background-image: url(../../img/sprite-socials.png);"; }
+  content: "Error: Undefined mixin 'nomargin'.\A         on line 21 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss, in `nomargin'\A         from line 21 of c:\WebServers\home\loftshop\app\scss\_blocks\_footer.scss\A \A 16: .footer-navigation__item {display: inline-block; margin-right: 25px;}\A 17: .footer-navigation__link {color: white; transition: .3s; text-decoration: none; border-bottom: 1px solid rgba(white, .5);}\A 18: .footer-navigation__link:hover, .footer-navigation__link:focus, .footer-navigation__link:active {color: #ccc; transition: .3s;}\A 19: \A 20: .footer-cocials-wrapper {padding: 35px 0;}\A 21: .footer-socials {@include nomargin(0);}\A 22: .footer-socials__item {display: inline-block; margin-left: 25px;}\A 23: .footer-socials__link {height: 43px; width: 43px; display: inline-block; @include borderRadiusMix(50%); background: white;}\A 24: \A 25: .footer-socials__link_fb {\A 26: 	background-image: url(../../img/sprite-socials.png);"; }

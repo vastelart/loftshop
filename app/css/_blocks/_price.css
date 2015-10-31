@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$orange".
-        on line 66 of e:\web\loftshop\app\scss\_blocks\_price.scss
+        on line 66 of c:\WebServers\home\loftshop\app\scss\_blocks\_price.scss
 
 61: .ui-slider {height: 3px;}
 62: .ui-slider.ui-slider-horizontal {
@@ -11,7 +11,7 @@ Error: Undefined variable: "$orange".
 67: }
 
 Backtrace:
-e:\web\loftshop\app\scss\_blocks\_price.scss:66
+c:\WebServers\home\loftshop\app\scss\_blocks\_price.scss:66
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
 c:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -58,4 +58,4 @@ c:/Ruby22-x64/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$orange\".\A         on line 66 of e:\web\loftshop\app\scss\_blocks\_price.scss\A \A 61: .ui-slider {height: 3px;}\A 62: .ui-slider.ui-slider-horizontal {\A 63: 	background: #dee1e4;\A 64: }\A 65: .ui-slider-range {\A 66: 	background: $orange;\A 67: }"; }
+  content: "Error: Undefined variable: \"$orange\".\A         on line 66 of c:\WebServers\home\loftshop\app\scss\_blocks\_price.scss\A \A 61: .ui-slider {height: 3px;}\A 62: .ui-slider.ui-slider-horizontal {\A 63: 	background: #dee1e4;\A 64: }\A 65: .ui-slider-range {\A 66: 	background: $orange;\A 67: }"; }

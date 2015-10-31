@@ -9,7 +9,8 @@
     overflow: hidden;
 }
 
-.footer-logo-wrapper {padding: 72px 0;}
+.footer-logo-wrapper {padding: 72px 0; width: 238px; height: 36px;}
+.footer-logo {width: 100%; max-width: 100%; max-height: 100%;}
 
 .footer-navigation {width: 600px; line-height: 2.5em; text-align: right; margin-right: -25px; font-size: 14px;}
 .footer-navigation__item {display: inline-block; margin-right: 25px;}

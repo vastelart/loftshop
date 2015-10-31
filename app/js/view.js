@@ -26,5 +26,3 @@ var viewModule = (function () {
 		init: init
 	}
 })();
-
-viewModule.init();

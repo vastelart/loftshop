@@ -976,13 +976,14 @@ body {
     margin: 0;
     padding: 0;
     margin-left: 5px; }
-  .model.model_view-list .first-image {
-    margin-bottom: 15px; }
   .model.model_view-list .model__slider-wrapper {
     display: none; }
-  .model.model_view-list .model__slider {
-    margin: 0;
-    padding: 0; }
+  .model.model_view-list .rating-wrapper {
+    display: none; }
+  .model.model_view-list .table-line {
+    display: none; }
+  .model.model_view-list .model__description {
+    display: none; }
   .model.model_view-list .model__info-wrapper {
     float: left;
     width: 375px; }
@@ -1006,8 +1007,6 @@ body {
     content: "Смартфон";
     font-weight: normal;
     margin-right: 7px; }
-  .model.model_view-list .model__description {
-    display: none; }
   .model.model_view-list .model__description-item {
     display: inline-block;
     font-weight: 600; }
@@ -1017,10 +1016,9 @@ body {
     font-weight: normal; }
   .model.model_view-list .model__description-item:nth-child(odd) {
     background: transparent; }
-  .model.model_view-list .rating-wrapper {
-    display: none; }
-  .model.model_view-list .table-line {
-    display: none; }
+  .model.model_view-list .model__extras {
+    display: inline-block;
+    width: 335px; }
   .model.model_view-list .available-btn-wrapper {
     display: inline-block;
     width: 215px;
@@ -1061,7 +1059,14 @@ body {
   overflow: hidden; }
 
 .footer-logo-wrapper {
-  padding: 72px 0; }
+  padding: 72px 0;
+  width: 238px;
+  height: 36px; }
+
+.footer-logo {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%; }
 
 .footer-navigation {
   width: 600px;
